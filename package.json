@@ -9,3 +9,18 @@
   },
   "dependencies": {}
 }
+
+
+
+{
+  "name": "ai-brief-orchestrator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "brief": "node scripts/brief-orchestrator.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "openai": "latest"
+  }
+}
