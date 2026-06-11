@@ -1,18 +1,4 @@
 {
-  "name": "dont-go-broke",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "Dont_Go_Broke project and orchestrator",
-  "main": "scripts/brief-orchestrator.mjs",
-  "scripts": {
-    "orchestrate": "node scripts/brief-orchestrator.mjs"
-  },
-  "dependencies": {}
-}
-
-
-
-{
   "name": "ai-brief-orchestrator",
   "private": true,
   "type": "module",
