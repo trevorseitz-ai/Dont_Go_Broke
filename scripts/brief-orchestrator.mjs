@@ -325,6 +325,266 @@ async function processProvider(providerDir) {
   write(finalPath, finalCopy);
 }
 
+// --- Cover Copy Prompts ---
+
+function buildCoverDraftPrompt(providerName, finalCopy) {
+  return `
+You are Claude. Write the front cover copy for a pamphlet in the DON'T GO BROKE IN THE AGE OF AI series.
+
+This pamphlet is about: ${providerName}
+
+APPROVED BODY COPY:
+${finalCopy}
+
+FIXED SERIES TITLE (do not change):
+DON'T GO BROKE IN THE AGE OF AI
+
+TASK:
+Create cover copy that packages the body copy's main warning for a front cover.
+
+REQUIREMENTS:
+- The series title is fixed. Do not vary it.
+- The provider edition must say "${providerName} Edition".
+- The cover subtitle should be warning-oriented and specific to ${providerName}.
+- The short warning line should be one practical sentence for first-time solo AI app builders.
+- The CTA / positioning line is optional but should fit the pamphlet's tone if included.
+- Cover copy must be short, practical, and warning-oriented.
+- Do not be anti-tool or hypey.
+- Do not include exact prices, quotas, credit amounts, model availability claims, or plan details.
+- Do not create a back cover.
+- Base the cover angle on the body copy's actual main trap.
+
+OUTPUT FORMAT (use exactly this structure):
+
+# Cover Copy
+
+**Series Title:**
+DON'T GO BROKE IN THE AGE OF AI
+
+**Provider Edition:**
+${providerName} Edition
+
+**Cover Subtitle:**
+[Warning-oriented subtitle]
+
+**Short Warning Line:**
+[One practical warning sentence for first-time solo AI app builders]
+
+**CTA / Positioning Line:**
+[Short optional line that fits the pamphlet tone]
+`;
+}
+
+function buildCoverReviewPrompt(providerName, coverDraft, finalCopy) {
+  return `
+You are ChatGPT acting as cover copy reviewer for the DON'T GO BROKE IN THE AGE OF AI series.
+
+This pamphlet is about: ${providerName}
+
+APPROVED BODY COPY:
+${finalCopy}
+
+COVER DRAFT:
+${coverDraft}
+
+TASK:
+Review the cover draft against the approved body copy and series standards.
+
+CHECK:
+1. Does the cover subtitle match the body copy's actual main trap?
+2. Is the cover copy specific to ${providerName}?
+3. Does it avoid duplicating another provider's angle?
+4. Does it avoid unsupported pricing, model, limit, or quota claims?
+5. Does it fit the established series tone (calm, practical, warning-oriented, not anti-tool, not hypey)?
+6. Is it short enough for a cover?
+
+DECISION RULE:
+If the cover copy is accurate, provider-specific, and tonally correct, finalize it.
+Only revise if the cover angle does not match the body's trap, duplicates another provider, or contains unsupported claims.
+
+OUTPUT FORMAT:
+Start with exactly one of these labels:
+
+DECISION: FINALIZE
+
+or
+
+DECISION: REVISE
+
+If FINALIZE:
+Return the final cover copy after the decision line using this exact structure:
+
+# Cover Copy
+
+**Series Title:**
+DON'T GO BROKE IN THE AGE OF AI
+
+**Provider Edition:**
+${providerName} Edition
+
+**Cover Subtitle:**
+[Warning-oriented subtitle]
+
+**Short Warning Line:**
+[One practical warning sentence for first-time solo AI app builders]
+
+**CTA / Positioning Line:**
+[Short optional line that fits the pamphlet tone]
+
+If REVISE:
+Return only specific revision instructions after the decision line.
+No final copy.
+`;
+}
+
+function buildCoverRevisionPrompt(providerName, coverDraft, reviewNotes, finalCopy) {
+  return `
+You are Claude. Revise the cover copy using the review instructions.
+
+This pamphlet is about: ${providerName}
+
+APPROVED BODY COPY:
+${finalCopy}
+
+ORIGINAL COVER DRAFT:
+${coverDraft}
+
+REVISION INSTRUCTIONS:
+${reviewNotes}
+
+REQUIREMENTS:
+- Return revised cover copy only.
+- No notes, changelog, or alternatives.
+- Use the exact output structure below.
+- Do not change the series title.
+- Do not include exact prices, quotas, credit amounts, or plan details.
+
+OUTPUT FORMAT:
+
+# Cover Copy
+
+**Series Title:**
+DON'T GO BROKE IN THE AGE OF AI
+
+**Provider Edition:**
+${providerName} Edition
+
+**Cover Subtitle:**
+[Warning-oriented subtitle]
+
+**Short Warning Line:**
+[One practical warning sentence for first-time solo AI app builders]
+
+**CTA / Positioning Line:**
+[Short optional line that fits the pamphlet tone]
+`;
+}
+
+function buildCoverFinalizerPrompt(providerName, revisedCover) {
+  return `
+You are ChatGPT. Produce the final cover copy for the ${providerName} pamphlet.
+
+REVISED COVER:
+${revisedCover}
+
+TASK:
+Return the final publishable cover copy only.
+
+RULES:
+- Remove any notes, alternatives, or scaffolding.
+- Keep the exact structure below.
+- Do not change the series title.
+- Do not invent exact prices, quotas, or plan details.
+- Keep it short, practical, and warning-oriented.
+
+OUTPUT FORMAT:
+
+# Cover Copy
+
+**Series Title:**
+DON'T GO BROKE IN THE AGE OF AI
+
+**Provider Edition:**
+${providerName} Edition
+
+**Cover Subtitle:**
+[Warning-oriented subtitle]
+
+**Short Warning Line:**
+[One practical warning sentence for first-time solo AI app builders]
+
+**CTA / Positioning Line:**
+[Short optional line that fits the pamphlet tone]
+`;
+}
+
+// --- Cover Copy Orchestration ---
+
+async function processCoverCopy(providerDir) {
+  const finalCopyPath = path.join(providerDir, "05-final-copy.md");
+  const coverDraftPath = path.join(providerDir, "06-cover-copy-draft.md");
+  const coverReviewPath = path.join(providerDir, "07-cover-copy-review.md");
+  const finalCoverPath = path.join(providerDir, "08-final-cover-copy.md");
+
+  if (!exists(finalCopyPath)) {
+    return;
+  }
+
+  if (exists(finalCoverPath)) {
+    console.log(`Skipping ${providerDir}: final cover copy already exists.`);
+    return;
+  }
+
+  const providerName = path.basename(providerDir);
+  const finalCopy = read(finalCopyPath);
+
+  // Step 1: Cover Draft (Claude)
+  if (!exists(coverDraftPath)) {
+    console.log(`Creating cover copy draft for ${providerDir}`);
+    const draft = await callClaude(buildCoverDraftPrompt(providerName, finalCopy));
+    write(coverDraftPath, draft);
+  }
+
+  const coverDraft = read(coverDraftPath);
+
+  // Step 2: Cover Review (OpenAI)
+  if (!exists(coverReviewPath)) {
+    console.log(`Reviewing cover copy for ${providerDir}`);
+    const review = await callOpenAI(
+      buildCoverReviewPrompt(providerName, coverDraft, finalCopy)
+    );
+    write(coverReviewPath, review);
+  }
+
+  const coverReview = read(coverReviewPath);
+
+  // Step 3: Finalize or Revise
+  if (coverReview.startsWith("DECISION: FINALIZE")) {
+    console.log(`Finalizing cover copy directly for ${providerDir}`);
+    const finalCover = coverReview.replace(/^DECISION:\s*FINALIZE\s*/i, "").trim();
+    write(finalCoverPath, finalCover);
+    return;
+  }
+
+  if (!coverReview.startsWith("DECISION: REVISE")) {
+    throw new Error(
+      `Cover review must start with DECISION: FINALIZE or DECISION: REVISE. Check ${coverReviewPath}`
+    );
+  }
+
+  // Revise via Claude, then finalize via OpenAI
+  console.log(`Revising cover copy for ${providerDir}`);
+  const revisedCover = await callClaude(
+    buildCoverRevisionPrompt(providerName, coverDraft, coverReview, finalCopy)
+  );
+
+  console.log(`Finalizing revised cover copy for ${providerDir}`);
+  const finalCover = await callOpenAI(
+    buildCoverFinalizerPrompt(providerName, revisedCover)
+  );
+  write(finalCoverPath, finalCover);
+}
+
 async function main() {
   validateEnvironment();
 
@@ -337,6 +597,7 @@ async function main() {
 
   for (const providerDir of providerFolders) {
     await processProvider(providerDir);
+    await processCoverCopy(providerDir);
   }
 }
 
