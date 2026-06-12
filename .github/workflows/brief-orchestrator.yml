@@ -1,19 +1,11 @@
 name: Brief Orchestrator
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "briefs/**/00-provider-request.md"
-      - "scripts/brief-orchestrator.mjs"
-      - ".github/workflows/brief-orchestrator.yml"
-      - "package.json"
-      - "package-lock.json"
   workflow_dispatch:
 
 permissions:
   contents: write
+
 
 jobs:
   orchestrate:
