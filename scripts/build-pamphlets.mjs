@@ -58,16 +58,28 @@ function findCoverImage(providerDir) {
  *   **Series Title:**
  *   DON'T GO BROKE IN THE AGE OF AI
  *
- *   **Provider Edition:**
- *   Replit Edition
- *   ...
+ *   **Top Line / Series Kicker:**
+ *   Early User Notes for Solo AI App Builders
+ *
+ *   **Cover Subtitle:**
+ *   Replit: When the Agent Outpaces You
+ *
+ *   **Bottom Line:**
+ *   A short warning for first-time builders...
+ *
+ *   **Badge:**
+ *   5 PAGES · SHORT & PRACTICAL
  */
 function parseCoverCopy(markdown) {
   const fields = {};
   const fieldMap = {
     "Series Title": "seriesTitle",
-    "Provider Edition": "providerEdition",
+    "Top Line / Series Kicker": "kicker",
     "Cover Subtitle": "coverSubtitle",
+    "Bottom Line": "bottomLine",
+    "Badge": "badge",
+    // Legacy field names (backward compat)
+    "Provider Edition": "providerEdition",
     "Short Warning Line": "warningLine",
     "CTA / Positioning Line": "cta",
   };
@@ -96,16 +108,33 @@ function parseCoverCopy(markdown) {
 
 /**
  * Build a text-based cover page from parsed cover-copy fields.
+ * Mirrors the approved Replit cover image layout.
  */
 function buildTextCover(fields) {
+  const kicker = fields.kicker || "Early User Notes for Solo AI App Builders";
+  const title = fields.seriesTitle || "DON\u2019T GO BROKE IN THE AGE OF AI";
+  const subtitle = fields.coverSubtitle || "";
+  const bottomLine = fields.bottomLine || fields.warningLine || fields.cta || "";
+  const badge = fields.badge || "5 PAGES \u00b7 SHORT & PRACTICAL";
+
   return `
     <div class="cover-text-page">
-      <p class="cover-kicker">Early User Briefs for Solo AI App Builders</p>
-      <h1 class="cover-title">${esc(fields.seriesTitle || "DON\u2019T GO BROKE IN THE AGE OF AI")}</h1>
-      <p class="cover-edition">${esc(fields.providerEdition || "")}</p>
-      <p class="cover-subtitle">${esc(fields.coverSubtitle || "")}</p>
-      <p class="cover-warning">${esc(fields.warningLine || "")}</p>
-      <p class="cover-cta">${esc(fields.cta || "")}</p>
+      <div class="cover-top">
+        <p class="cover-kicker">${esc(kicker)}</p>
+        <div class="cover-rule"></div>
+        <h1 class="cover-title">${esc(title)}</h1>
+        <p class="cover-subtitle">${esc(subtitle)}</p>
+      </div>
+      <div class="cover-middle">
+        <!-- Reserved for future illustration -->
+      </div>
+      <div class="cover-bottom">
+        <div class="cover-rule"></div>
+        <div class="cover-bottom-row">
+          <p class="cover-bottom-line">${esc(bottomLine)}</p>
+          <p class="cover-badge">${esc(badge)}</p>
+        </div>
+      </div>
     </div>
   `;
 }
@@ -198,7 +227,7 @@ async function buildProvider(providerSlug, browser, cssContent) {
   const bodyHtml = marked(processedBody);
 
   // Assemble full HTML
-  const title = `${coverFields.providerEdition || providerSlug} — DON\u2019T GO BROKE IN THE AGE OF AI`;
+  const title = `${coverFields.coverSubtitle || providerSlug} — DON\u2019T GO BROKE IN THE AGE OF AI`;
   const fullHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>

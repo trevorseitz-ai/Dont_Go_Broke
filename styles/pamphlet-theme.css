@@ -179,72 +179,95 @@ pre code {
 }
 
 /* ── Cover Page: Text-Based Fallback ── */
+/* Mirrors the approved Replit cover image layout */
 .cover-text-page {
   page-break-after: always;
   break-after: page;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2in 1.5in;
-  background-color: #faf9f7;
+  justify-content: space-between;
+  padding: 1.2in 1.3in 1in 1.3in;
+  background-color: #f0efed;
+}
+
+/* Top section: kicker + rule + title + subtitle */
+.cover-top {
+  flex-shrink: 0;
 }
 
 .cover-kicker {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-light);
-  margin-bottom: 2em;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.6em 0;
+  letter-spacing: 0.01em;
+}
+
+.cover-rule {
+  border: none;
+  border-top: 2px solid #1a202c;
+  margin: 0 0 1.2em 0;
 }
 
 .cover-text-page .cover-title {
-  font-size: 2.8em;
+  font-size: 3.2em;
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.05;
   color: #0f172a;
-  margin: 0 0 0.3em 0;
+  margin: 0 0 0.35em 0;
   padding-bottom: 0;
   border-bottom: none;
-  letter-spacing: -0.01em;
-}
-
-.cover-edition {
-  font-size: 1.1em;
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: 1.5em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .cover-subtitle {
-  font-size: 1.2em;
+  font-size: 1.3em;
+  line-height: 1.35;
+  color: var(--color-text);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Middle: open area for future illustration */
+.cover-middle {
+  flex: 1;
+  min-height: 2in;
+}
+
+/* Bottom section: rule + bottom line + badge */
+.cover-bottom {
+  flex-shrink: 0;
+}
+
+.cover-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.cover-bottom-line {
+  font-size: 0.95em;
   line-height: 1.45;
   color: var(--color-text);
-  max-width: 500px;
-  margin: 0 0 2em 0;
+  margin: 0;
+  max-width: 65%;
   font-weight: 500;
 }
 
-.cover-warning {
-  font-size: 0.95em;
-  line-height: 1.5;
-  color: var(--color-text-light);
-  max-width: 480px;
-  margin: 0 0 2em 0;
-}
-
-.cover-cta {
-  font-size: 0.85em;
-  font-family: var(--font-mono);
-  color: var(--color-accent);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.cover-badge {
+  font-size: 0.78em;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  border: 2px solid #1a202c;
+  padding: 0.35em 0.6em;
+  line-height: 1.3;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* ── Body Pages ── */
