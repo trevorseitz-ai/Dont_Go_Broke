@@ -1,16 +1,16 @@
 # Cover Copy
 
 **Series Title:**
-DON’T GO BROKE IN THE AGE OF AI
+DON'T GO BROKE IN THE AGE OF AI
 
-**Provider Edition:**
-Replit Edition
+**Top Line / Series Kicker:**
+Early User Notes for Solo AI App Builders
 
 **Cover Subtitle:**
-When the Agent Keeps Building Past the Point You Understand
+Replit: When the Agent Outpaces You
 
-**Short Warning Line:**
-Your credits disappear faster than your understanding — here's how to stop that before it happens.
+**Bottom Line:**
+A short warning for first-time builders before the agent builds past your budget.
 
-**CTA / Positioning Line:**
-The rules are learnable. Nobody just tells you what they are.
+**Badge:**
+5 PAGES · SHORT & PRACTICAL

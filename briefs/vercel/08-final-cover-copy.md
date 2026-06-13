@@ -1,16 +1,16 @@
 # Cover Copy
 
 **Series Title:**
-DON’T GO BROKE IN THE AGE OF AI
+DON'T GO BROKE IN THE AGE OF AI
 
-**Provider Edition:**
-Vercel Edition
+**Top Line / Series Kicker:**
+Early User Notes for Solo AI App Builders
 
 **Cover Subtitle:**
-The Green Checkmark Doesn't Mean You're Done
+Vercel: The Green Checkmark Isn't the Finish Line
 
-**Short Warning Line:**
-A successful deploy proves your app is reachable — not that it's correctly configured, safely exposed to real users, or costing what you think it is.
-
-**CTA / Positioning Line:**
+**Bottom Line:**
 Know what Vercel handles. Know what it doesn't.
+
+**Badge:**
+5 PAGES · SHORT & PRACTICAL
