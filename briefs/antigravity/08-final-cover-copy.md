@@ -1,10 +1,10 @@
 # Cover Copy
 
 **Series Title:**
-DON'T GO BROKE IN THE AGE OF AI
+DON’T GO BROKE IN THE AGE OF AI
 
 **Provider Edition:**
-antigravity Edition
+Google Antigravity Edition
 
 **Cover Subtitle:**
 How to Ship Agent-Driven Features Without Letting Them Rewrite Your Whole Stack

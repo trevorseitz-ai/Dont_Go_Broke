@@ -1,10 +1,10 @@
 # Cover Copy
 
 **Series Title:**
-DON'T GO BROKE IN THE AGE OF AI
+DON’T GO BROKE IN THE AGE OF AI
 
 **Provider Edition:**
-replit Edition
+Replit Edition
 
 **Cover Subtitle:**
 When the Agent Keeps Building Past the Point You Understand

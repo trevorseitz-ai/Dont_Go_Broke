@@ -1,7 +1,7 @@
 # Cover Copy
 
 **Series Title:**
-DON'T GO BROKE IN THE AGE OF AI
+DON’T GO BROKE IN THE AGE OF AI
 
 **Provider Edition:**
 v0 Edition

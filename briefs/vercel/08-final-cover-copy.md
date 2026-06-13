@@ -1,10 +1,10 @@
 # Cover Copy
 
 **Series Title:**
-DON'T GO BROKE IN THE AGE OF AI
+DON’T GO BROKE IN THE AGE OF AI
 
 **Provider Edition:**
-vercel Edition
+Vercel Edition
 
 **Cover Subtitle:**
 The Green Checkmark Doesn't Mean You're Done

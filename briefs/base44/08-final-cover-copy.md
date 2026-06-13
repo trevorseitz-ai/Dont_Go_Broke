@@ -1,10 +1,10 @@
 # Cover Copy
 
 **Series Title:**
-DON'T GO BROKE IN THE AGE OF AI
+DON’T GO BROKE IN THE AGE OF AI
 
 **Provider Edition:**
-base44 Edition
+Base44 Edition
 
 **Cover Subtitle:**
 Your App Is Running. Do You Know What You Actually Built — Or What It's Costing You to Run It?
