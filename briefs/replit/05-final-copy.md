@@ -51,7 +51,7 @@ Here is the scary moment: Progress is still visible. Files are changing. The pre
 
 At that moment, you have a choice: stop and understand, or keep going and trust. Most beginners keep going. The agent is still working, so you ask for one more thing.
 
-Once you have lost the plot, every future prompt gets more expensive. The agent is working inside a mess you no longer control. The scary moment is not when Replit makes a mistake. The scary moment is when Replit is still working and you no longer know whether it is helping.
+Once you have lost the plot, every future prompt gets more expensive. The agent is working inside a mess you no longer control. The scary moment is not when Replit makes a mistake. The scary moment is when Replit is still working and you no longer know whether it is helping—while the credit meter keeps running in the background.
 
 ---
 
@@ -144,7 +144,7 @@ Something breaks. You paste the error and say "fix this." But repeated "fix this
 
 **Don't Go Unlimited Too Early**
 
-Unlimited plans feel like freedom. They're not. If you upgrade before you understand your workflow, you don't build smarter—you make the same mistakes faster. Limits are training wheels.
+Unlimited plans feel like freedom. They're not. If you upgrade before you understand your workflow, you don't build smarter—you make the same mistakes faster. Limits are training wheels. Check your usage and remaining credits regularly, especially after a few agent prompts, so you learn what each turn actually costs.
 
 **Plan Before You Prompt**
 
