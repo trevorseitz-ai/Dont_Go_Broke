@@ -1,0 +1,288 @@
+/* DON'T GO BROKE IN THE AGE OF AI — Pamphlet Theme */
+/* Generalized for all provider editions */
+
+/* ── Fonts & Variables ── */
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  --color-bg: #ffffff;
+  --color-text: #1a202c;
+  --color-text-light: #4a5568;
+  --color-accent: hsl(20, 90%, 55%);
+  --color-accent-green: hsl(140, 80%, 40%);
+  --color-bg-accent: hsla(20, 90%, 55%, 0.08);
+  --color-bg-green: hsla(140, 80%, 40%, 0.08);
+  --color-bg-code: #f8fafc;
+  --color-border-code: #e2e8f0;
+  --color-border-light: #e2e8f0;
+}
+
+/* ── Page Setup ── */
+@page {
+  size: letter;
+  margin: 1in 1.15in;
+}
+
+@page:first {
+  margin: 0;
+}
+
+/* ── Base ── */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.65;
+  font-size: 11pt;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #0f172a;
+}
+
+h1 {
+  font-size: 1.75em;
+  border-bottom: 2px solid var(--color-accent-green);
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 1.35em;
+}
+
+h3 {
+  font-size: 1.15em;
+}
+
+h4 {
+  font-size: 1.05em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.9em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin: 2em 0;
+}
+
+/* ── Lists ── */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.35em;
+}
+
+/* Checklists: - [ ] items rendered by marked */
+li input[type="checkbox"] {
+  margin-right: 0.4em;
+}
+
+/* ── Blockquotes ── */
+blockquote {
+  border-left: 3px solid var(--color-accent);
+  background-color: var(--color-bg-accent);
+  margin: 1.25em 0;
+  padding: 0.8em 1.2em;
+  border-radius: 0 4px 4px 0;
+  color: var(--color-text);
+}
+
+blockquote p {
+  margin-bottom: 0.4em;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Code ── */
+pre, code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+pre {
+  background-color: var(--color-bg-code);
+  border: 1px solid var(--color-border-code);
+  padding: 0.9em 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 1em 0;
+}
+
+code {
+  background-color: var(--color-bg-code);
+  padding: 0.12em 0.3em;
+  border-radius: 3px;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* ── Cover Page: Image-Based ── */
+.cover-image-page {
+  page-break-after: always;
+  break-after: page;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-image-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Cover Page: Text-Based Fallback ── */
+.cover-text-page {
+  page-break-after: always;
+  break-after: page;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2in 1.5in;
+  background-color: #faf9f7;
+}
+
+.cover-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  margin-bottom: 2em;
+  font-weight: 500;
+}
+
+.cover-text-page .cover-title {
+  font-size: 2.8em;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #0f172a;
+  margin: 0 0 0.3em 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  letter-spacing: -0.01em;
+}
+
+.cover-edition {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cover-subtitle {
+  font-size: 1.2em;
+  line-height: 1.45;
+  color: var(--color-text);
+  max-width: 500px;
+  margin: 0 0 2em 0;
+  font-weight: 500;
+}
+
+.cover-warning {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: var(--color-text-light);
+  max-width: 480px;
+  margin: 0 0 2em 0;
+}
+
+.cover-cta {
+  font-size: 0.85em;
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ── Body Pages ── */
+.body-content {
+  /* Content starts after cover page break */
+}
+
+/* Page breaks at each "# Page N" heading — these become h1 in HTML */
+.body-content h1 {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Exception: first h1 after cover should not double-break */
+.body-content h1:first-child {
+  page-break-before: auto;
+  break-before: auto;
+}
+
+/* Prevent headers from being orphaned */
+h1, h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+/* Keep block elements together */
+blockquote, pre, ul, ol {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* ── Footer / Series Note ── */
+.body-content > p:last-child em {
+  font-size: 0.85em;
+  color: var(--color-text-light);
+}
+
+/* ── Page Layout ── */
+.page-wrapper {
+  max-width: 100%;
+}

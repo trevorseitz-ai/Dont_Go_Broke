@@ -3,10 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "brief": "node scripts/brief-orchestrator.mjs"
+    "brief": "node scripts/brief-orchestrator.mjs",
+    "build:pamphlets": "node scripts/build-pamphlets.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "latest",
-    "openai": "latest"
+    "marked": "^15.0.0",
+    "openai": "latest",
+    "puppeteer": "^24.0.0"
   }
 }
