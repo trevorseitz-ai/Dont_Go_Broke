@@ -1,10 +1,12 @@
-# DON'T GO BROKE IN THE AGE OF AI
+# DON’T GO BROKE IN THE AGE OF AI
 
-## Early User Notes for Solo AI App Builders
+## Replit Edition
+
+### The Moment You Stop Understanding What You’re Paying For
 
 ---
 
-# PAGE 1 — Replit: The Moment You Stop Understanding What You're Paying For
+# Page 1 — Replit: The Moment You Stop Understanding What You're Paying For
 
 *A short warning for first-time builders before the agent keeps building past your budget.*
 
@@ -22,7 +24,7 @@ Here is what nobody tells you: You did not lose credits because you were lazy or
 
 ---
 
-# PAGE 2 — Why Replit Burns Beginners Differently
+# Page 2 — Why Replit Burns Beginners Differently
 
 ## It Feels Like One Tool, But It Is Really Several Jobs at Once
 
@@ -53,7 +55,7 @@ Once you have lost the plot, every future prompt gets more expensive. The agent 
 
 ---
 
-# PAGE 3 — Two Replit Fixes You Can Use Before You Burn More Credits
+# Page 3 — Two Replit Fixes You Can Use Before You Burn More Credits
 
 ## Fix 1: Make Replit Explain the Change Before It Makes the Change
 
@@ -94,7 +96,7 @@ Now that you know the Replit-specific traps, the bigger pattern becomes easier t
 
 ---
 
-# PAGE 4 — The Part Nobody Tells New AI Builders
+# Page 4 — The Part Nobody Tells New AI Builders
 
 **You're not stupid. Nobody told you the rules.**
 
@@ -138,7 +140,7 @@ Something breaks. You paste the error and say "fix this." But repeated "fix this
 
 ---
 
-# PAGE 5 — The Advice Everyone Hates Until They Lose Credits
+# Page 5 — The Advice Everyone Hates Until They Lose Credits
 
 **Don't Go Unlimited Too Early**
 
@@ -162,16 +164,3 @@ You are not bad at this. The tools are powerful. The rules are hidden until you 
 
 The goal is not to stop using AI app builders. The goal is to stop using them like a slot machine. You do not need to quit building. You need to stop paying tuition to the prompt box.
 
----
-
-## Coming Soon from DON'T GO BROKE IN THE AGE OF AI
-
-**Book 1: Planning Before You Prompt** — Define the app, limit the scope, and stop accidentally buying features you do not need.
-
-**Book 2: Building Without Burning Credits** — Move from idea to working app in controlled stages.
-
-**Book 3: Debugging, Shipping, and Scaling Without Panic-Spending** — Fix problems, prepare for launch, and understand post-prototype costs.
-
-**Book 4: Adding AI Features Without API Bill Shock** — Coming later.
-
-*No sales pitch. No hype. Just the rules, so you can stop learning them the expensive way.*

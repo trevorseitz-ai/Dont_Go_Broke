@@ -1,8 +1,12 @@
-# DON’T GO BROKE IN THE AGE OF AI: Base44 Edition
+# DON’T GO BROKE IN THE AGE OF AI
+
+## Base44 Edition
+
+### The App Looks Done. That Doesn’t Mean You Own It.
 
 ---
 
-## Page 1 — What Base44 Gives You (And What It Doesn't)
+# Page 1 — What Base44 Gives You (And What It Doesn't)
 
 Base44 is a genuinely powerful tool. Describe what you want to build — a customer portal, an internal workflow tool, a simple SaaS product — and Base44 turns that description into a working app. It can handle structure, design, logic, backend behavior, hosting, and app management. You don't need to write code. You don't need to configure a server. You don't need to hire a developer to see something real on your screen. For someone who wants to ship quickly, that's a remarkable thing.
 
@@ -12,7 +16,7 @@ This pamphlet covers two specific traps that catch first-time Base44 builders. T
 
 ---
 
-## Page 2 — The App Looks Done. That Doesn't Mean You Own It.
+# Page 2 — The App Looks Done. That Doesn't Mean You Own It.
 
 Base44 can produce a complete-feeling product in a short amount of time: screens, user flows, data logic, integrations with external services, hosted deployment, and management features like analytics, custom domains, and GitHub integration (depending on your plan and current feature set). This is the platform's core value. It is also what creates the main trap.
 
@@ -33,7 +37,7 @@ That is the Architecture Blindness Trap. The app is real. The ownership isn't.
 
 ---
 
-## Page 3 — Slow Down and Map What Base44 Built for You.
+# Page 3 — Slow Down and Map What Base44 Built for You.
 
 You don't need an engineering degree to get out of the Architecture Blindness Trap. You need a document — even a single page — that answers the core questions about your app. Do this before you invite real users. Do it again whenever you add a significant new feature.
 
@@ -86,7 +90,7 @@ That document is what real ownership looks like.
 
 ---
 
-## Page 4 — Your App Runs. That Doesn't Mean It's Free to Use.
+# Page 4 — Your App Runs. That Doesn't Mean It's Free to Use.
 
 Once you've launched a Base44 app, there's a second trap waiting: the assumption that you're done spending.
 
@@ -116,7 +120,7 @@ Some features — backend functions, custom domains, GitHub integration, analyti
 
 ---
 
-## Page 5 — Use Base44's Speed Without Losing the Plot.
+# Page 5 — Use Base44's Speed Without Losing the Plot.
 
 Base44 is fast. Describe something, and you can have a working app — with structure, logic, integrations, and hosting — in a fraction of the time traditional development would require. That speed is real, and for the right use case, it's a genuine competitive advantage.
 

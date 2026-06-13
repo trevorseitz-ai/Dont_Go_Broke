@@ -1,10 +1,12 @@
-# DON'T GO BROKE IN THE AGE OF AI  
-## v0 by Vercel  
+# DON’T GO BROKE IN THE AGE OF AI
+
+## v0 Edition
+
 ### When a Beautiful Screen Tricks You Into Thinking You Have a Product
 
 ---
 
-## PAGE 1 — The Problem Nobody Warns You About
+# Page 1 — The Problem Nobody Warns You About
 
 v0 by Vercel is genuinely impressive. You describe what you want, and it builds a polished, interactive web interface in front of you. You can iterate on it in conversation. You can publish it to a live URL. You can sync it to GitHub. For a first-time builder, this feels like the future—because in many ways, it is.
 
@@ -22,7 +24,7 @@ Read this before you hit “Publish” and declare victory.
 
 ---
 
-## PAGE 2 — The Main Trap: The Interface Looks Finished Before the Product Exists
+# Page 2 — The Main Trap: The Interface Looks Finished Before the Product Exists
 
 ### What v0 actually does
 
@@ -60,7 +62,7 @@ That is how builders burn through time, credits, and reputation on something tha
 
 ---
 
-## PAGE 3 — What v0 Actually Gives You vs. What a Real Product Needs
+# Page 3 — What v0 Actually Gives You vs. What a Real Product Needs
 
 A clear mental model helps here. v0 is good at specific things and genuinely not responsible for others. The trouble comes from not knowing which is which.
 
@@ -99,7 +101,7 @@ A beautiful, responsive UI is the surface of a product. v0 builds surfaces very 
 
 ---
 
-## PAGE 4 — Secondary Trap: Hidden Complexity in Generated Code and Integrations
+# Page 4 — Secondary Trap: Hidden Complexity in Generated Code and Integrations
 
 ### The second illusion
 
@@ -149,7 +151,7 @@ You are not required to become an expert in every framework and service before y
 
 ---
 
-## PAGE 5 — Practical Guardrails: Using v0 Without Going Broke
+# Page 5 — Practical Guardrails: Using v0 Without Going Broke
 
 v0 is a capable, well-designed tool. The goal here is not to build slowly out of fear. The goal is to build fast **with accurate awareness of where you actually are.**
 

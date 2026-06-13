@@ -1,9 +1,12 @@
-# DON'T GO BROKE IN THE AGE OF AI  
-## Google Antigravity Edition: How to Use Agent-First Development Without Losing Control of Your Codebase
+# DON’T GO BROKE IN THE AGE OF AI
+
+## Google Antigravity Edition
+
+### How to Use Agent-First Development Without Losing Control of Your Codebase
 
 ---
 
-# PAGE 1 — The Premise
+# Page 1 — The Premise
 
 Google Antigravity is an agent-first development platform. It is designed around the idea that AI agents can do more than suggest code—they can plan features, edit files, propose refactors, add dependencies, and iterate across your entire project, often with meaningful autonomy. For a solo builder working alone on a small AI-backed app, that is genuinely useful. It is also genuinely dangerous if you are not careful about how you use it.
 
@@ -17,7 +20,7 @@ The goal of this pamphlet is not to slow you down. It is to help you keep review
 
 ---
 
-# PAGE 2 — How Antigravity Actually Helps (and Why That’s Dangerous)
+# Page 2 — How Antigravity Actually Helps (and Why That’s Dangerous)
 
 ## What Antigravity Does in a Typical Solo Workflow
 
@@ -41,7 +44,7 @@ That is the trap. Not that the agent is writing code. The trap is that the agent
 
 ---
 
-# PAGE 3 — The Main Trap: Agent Autonomy vs. Your Review Capacity
+# Page 3 — The Main Trap: Agent Autonomy vs. Your Review Capacity
 
 ## How a First-Time Builder Gets Into Trouble
 
@@ -88,7 +91,7 @@ The agent will not be there when something breaks at an inconvenient moment. You
 
 ---
 
-# PAGE 4 — The Secondary Trap: Activity Theater in an Agentic Workflow
+# Page 4 — The Secondary Trap: Activity Theater in an Agentic Workflow
 
 ## What Agent Activity Looks Like vs. What It Means
 
@@ -132,7 +135,7 @@ When you notice lots of motion but unclear forward progress, pause. That feeling
 
 ---
 
-# PAGE 5 — A Simple Antigravity Safety Workflow
+# Page 5 — A Simple Antigravity Safety Workflow
 
 ## Practical Steps to Keep Review Authority
 

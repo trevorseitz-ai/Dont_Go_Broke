@@ -1,5 +1,8 @@
-# DON'T GO BROKE IN THE AGE OF AI  
-## The Vercel Pamphlet: Your App Is Live. You're Not Done.
+# DON’T GO BROKE IN THE AGE OF AI
+
+## Vercel Edition
+
+### Your App Is Live. You’re Not Done.
 
 ---
 
