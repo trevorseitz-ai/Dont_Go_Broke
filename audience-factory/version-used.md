@@ -1,30 +1,37 @@
 # Audience Factory Version Used
 
-## Project
+## Active Audience Factory Version
 
-Don't Go Broke
+Audience Factory v3.0
 
-## Audience Factory Version
+## Active Project
 
-Audience Factory v2.2
+Don’t Go Broke
 
-## Current Execution Stage
+## Active Approved Strategy
 
-Promotion Strategy v2.0 generated.
+Promotion Strategy v2.2
 
-Next step:
+## Active Campaign System
 
-Campaign Brief v2.0 for Campaign 1: Launch Week — Problem Awareness.
+Campaign 1 uses Audience Factory v3.0 campaign-stage artifacts.
 
-## Current Approved Inputs
+## Current Campaign 1 State
 
-- Promotion Brief v2.1
-- Brand Position Document v2.1
-- Operations Profile v2.2
-- Strategic Objective v1.0
+Campaign: Replit — When the Meter Keeps Running
 
-## Notes
+Launch Decision: NO-GO
 
-Earlier Campaign Brief v1.0, Launch Readiness v1.0, Content Production Brief v1.0, and Creator Assignments v1.0 were validation artifacts and should not be treated as current execution documents.
+Reason: Launch-critical operational readiness confirmations remain pending.
 
-They may be referenced for lessons learned only.
+Planning Chain Status: Approved through Launch Blocker Resolution Plan v3.0.
+
+Next Operational Step: Resolve blockers and collect evidence manually.
+
+Next Artifact Only After Evidence Exists: Campaign 1 Revised Launch Readiness Report v3.0.
+
+## Important Governance Rule
+
+Decision Before Execution remains active.
+
+No campaign may launch, publish, post, send, trigger automations, edit live systems, or change live systems until the required readiness evidence exists and an updated Launch Decision authorizes launch.
