@@ -442,72 +442,113 @@ Complete each item manually. Record results, evidence, and notes. Items T-03 thr
 **T-01 — Open final Replit pamphlet PDF**
 
 - **What to check:** The final A-01 PDF file exists, opens correctly, and displays the correct title and cover page.
-- Result:
-- Evidence:
+- Result: PASS
+- Evidence: Manual operator verification — PDF opened and reviewed by Trevor on 2026-06-17. No file path captured for this check.
 - Notes:
+  - PDF exists and opens without error.
+  - PDF is the correct Replit pamphlet.
+  - Cover/title are correct: Replit — When the Meter Keeps Running.
+  - Don't Go Broke branding is present.
+  - File is readable and all pages display.
+  - No corruption, placeholder content, or wrong-guide content found.
+  - File name/path were not captured for this check.
+- Confirmed by: Trevor
+- Date confirmed: 2026-06-17
 
 ---
 
 **T-02 — Confirm PDF title and cover**
 
 - **What to check:** The PDF title, cover design, and first-page content match the approved A-01 asset specification — correct campaign title, brand elements, no placeholder content.
-- Result:
-- Evidence:
+- Result: PASS
+- Evidence: Manual operator verification — PDF cover/title reviewed by Trevor on 2026-06-17. No file path captured for this check.
 - Notes:
+  - Cover/title are correct: Replit — When the Meter Keeps Running.
+  - Don't Go Broke branding is present.
+  - PDF is the correct Replit pamphlet.
+  - No wrong-guide or placeholder cover observed.
+- Confirmed by: Trevor
+- Date confirmed: 2026-06-17
 
 ---
 
 **T-03 — Confirm landing page is live**
 
 - **What to check:** Navigate to the Kit landing page URL (`https://don-t-go-broke-in-the-age-of-ai.kit.com/65cad4036c`) and confirm it loads correctly, displays the correct offer, and the sign-up form is visible.
-- Result:
-- Evidence:
+- Landing page URL: https://don-t-go-broke-in-the-age-of-ai.kit.com/65cad4036c
+- Result: PASS
+- Evidence: Manual operator verification — landing page opened and reviewed by Trevor on 2026-06-17. No screenshot captured for this check.
 - Notes:
+  - Landing page loads at the approved URL.
+  - Offer is the correct Replit pamphlet.
+  - CTA/signup/download flow is visible.
+  - No wrong product, bundle, outdated copy, or placeholder content observed.
+- Confirmed by: Trevor
+- Date confirmed: 2026-06-17
 
 ---
 
 **T-04 — Submit test email through landing page**
 
 - **What to check:** Enter a test email address in the landing page sign-up form and submit. Confirm the form accepts the submission without error.
-- Result:
-- Evidence (include timestamp of submission):
+- Result: BLOCKED
+- Evidence: Operator correction — previous PASS was based on an incorrect assumption. The Kit landing page did not ask Trevor to enter an email address, so no test email was submitted at that step.
+- Flow-discovery note (read-only HTML inspection, 2026-06-18): Email capture does NOT occur on the Kit landing page. The Kit page is a marketing page only. The CTA button (text: “Get the 5 Free Briefs”) links to Payhip at https://payhip.com/b/3NXyc. Payhip is where email is requested. The landing page explicitly states: “You’ll be taken to Payhip to enter your email and download the PDFs immediately.” No Kit form is present on the landing page.
 - Notes:
+  - Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing.
+- Confirmed by: Trevor
+- Date confirmed: 2026-06-17
+- Current status: BLOCKED
+- Ready for revised readiness review?: No
 
 ---
 
 **T-05 — Confirm post-signup email arrives**
 
 - **What to check:** Check the test email inbox for the A-06 post-signup email. Confirm it arrives from `support@dontgobroke.dev`, contains the correct subject line, and displays correctly.
-- Result:
+- Result: BLOCKED
 - Evidence (include timestamp of receipt):
 - Notes:
+  - Kit sender/domain validation incomplete — blocks Kit email readiness.
+  - Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing.
+- Current status: BLOCKED
+- Ready for revised readiness review?: No
 
 ---
 
 **T-06 — Click download link**
 
 - **What to check:** In the received A-06 email, click the PDF download link or button. Confirm the link is functional and does not return an error.
-- Result:
+- Result: BLOCKED
 - Evidence:
 - Notes:
+  - Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing.
+- Current status: BLOCKED
+- Ready for revised readiness review?: No
 
 ---
 
 **T-07 — Confirm PDF opens from delivered link**
 
 - **What to check:** Confirm the A-01 PDF is accessible from the download link in A-06, opens correctly in a browser or PDF viewer, and displays the correct content from first page to last.
-- Result:
+- Result: BLOCKED
 - Evidence:
 - Notes:
+  - Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing.
+- Current status: BLOCKED
+- Ready for revised readiness review?: No
 
 ---
 
 **T-08 — Confirm support email works or is accessible**
 
 - **What to check:** Confirm that `support@dontgobroke.dev` is active and accessible, or that the sender address will not generate a bounce or delivery failure on reply.
-- Result:
+- Result: BLOCKED
 - Evidence:
 - Notes:
+  - Resend inbound receiving webhook not configured — blocks inbound support-email receiving through Resend, but should not be assumed to block outbound Payhip delivery unless the flow depends on it.
+- Current status: BLOCKED
+- Ready for revised readiness review?: No
 
 ---
 
@@ -571,8 +612,8 @@ Record the location and current production status of each final asset file.
 
 | Asset | Asset Name | Final File Location | File Format | Production Sign-Off Evidence Collected? | Notes |
 |-------|-----------|---------------------|-------------|----------------------------------------|-------|
-| A-01 | Replit Pamphlet | | PDF | PENDING EVIDENCE | |
-| A-02 | Landing Page / Download Flow | | Live URL | PENDING EVIDENCE | |
+| A-01 | Replit Pamphlet | | PDF | PENDING EVIDENCE | Manual verification PASSED (2026-06-17, Trevor) — PDF opens, correct title (Replit — When the Meter Keeps Running) and Don't Go Broke branding confirmed, file readable. No file path captured. Formal production sign-off (BC-03) still PENDING EVIDENCE — requires Stakeholder + Legal/Compliance + Design reviewer sign-off. |
+| A-02 | Landing Page / Download Flow | `https://don-t-go-broke-in-the-age-of-ai.kit.com/65cad4036c` | Live URL | PENDING EVIDENCE | Manual verification PASSED (2026-06-17, Trevor) — page loads at approved URL, correct Replit pamphlet offer and CTA/signup/download flow visible, no wrong product or placeholder content observed. Formal production sign-off (BC-02) still PENDING EVIDENCE — requires Stakeholder + Operations + Design reviewer sign-off. |
 | A-03 | Replit Discussion Asset | | Text / markdown | PENDING EVIDENCE | |
 | A-04 | Reddit Awareness Asset | | Text / markdown | PENDING EVIDENCE | |
 | A-05 | X Awareness Asset | | Text | PENDING EVIDENCE — see N-01 deferral decision | |
@@ -587,12 +628,12 @@ Record all delivery and automation confirmation evidence.
 
 | Check | URL or System | Test Timestamp | Result | Evidence Reference | Confirmed By | Date |
 |-------|--------------|----------------|--------|-------------------|--------------|------|
-| Landing page live and accessible | `https://don-t-go-broke-in-the-age-of-ai.kit.com/65cad4036c` | | PENDING EVIDENCE | | | |
-| Sign-up form submits correctly | Same URL | | PENDING EVIDENCE | | | |
-| Post-signup email received (A-06) | Test inbox | | PENDING EVIDENCE | | | |
-| PDF download link functional | A-06 email link | | PENDING EVIDENCE | | | |
-| PDF opens correctly (A-01) | Download link | | PENDING EVIDENCE | | | |
-| Sender address (`support@dontgobroke.dev`) accessible | Email client | | PENDING EVIDENCE | | | |
+| Landing page live and accessible | `https://don-t-go-broke-in-the-age-of-ai.kit.com/65cad4036c` | 2026-06-17 | PASS | Manual operator verification — landing page opened and reviewed by Trevor on 2026-06-17. No screenshot captured. | Trevor | 2026-06-17 |
+| Sign-up form submits correctly | Payhip — https://payhip.com/b/3NXyc | 2026-06-18 | BLOCKED | Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing. | Trevor | 2026-06-18 |
+| Post-signup email received (A-06) | Test inbox | | BLOCKED | Kit sender/domain validation incomplete — blocks Kit email readiness.<br>Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing. | | |
+| PDF download link functional | A-06 email link | | BLOCKED | Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing. | | |
+| PDF opens correctly (A-01) | Download link | | BLOCKED | Current Payhip destination is the 5-brief bundle, not the approved Replit-only Campaign 1 offer — blocks signup/download flow testing. | | |
+| Sender address (`support@dontgobroke.dev`) accessible | Email client | | BLOCKED | Resend inbound receiving webhook not configured — blocks inbound support-email receiving through Resend, but should not be assumed to block outbound Payhip delivery unless the flow depends on it. | | |
 | CAN-SPAM / GDPR: Unsubscribe link present in A-06 | A-06 email | | PENDING EVIDENCE | | | |
 | GDPR/CCPA: Minimal data collection confirmed | Landing page / Kit settings | | PENDING EVIDENCE | | | |
 
