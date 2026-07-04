@@ -8,7 +8,7 @@ That creates a dangerous feeling: “It looks real, so maybe it is right.”
 
 The first AI-generated draft is the moment when you are most vulnerable to false confidence. The project looks more complete than it actually is. It is tempting to keep the momentum going, to add more features, or to show it to someone else. 
 
-But this is not the point where trust should begin. This is the point where review must begin. The first draft is not proof that the product is correct. It is simply the first thing that must be questioned.
+But this is not the point where trust should begin. This is the point where review must begin. The plan you made before building is now the standard you review the first draft against. The first draft is not proof that the product is correct. It is simply the first thing that must be questioned.
 
 ## 2. Why the First Draft Feels More Trustworthy Than It Is
 
@@ -30,7 +30,7 @@ Generated output is material. It is a sketch, a suggestion, a placeholder. It is
 
 AI hates being stuck. If your prompt leaves out a detail, the AI will not always stop and ask you for clarification. It will simply guess. 
 
-It will make assumptions about user permissions, data structures, edge cases, and default behaviors. It will decide what happens when a user forgets their password, even if you never asked for a login screen. It will decide how data is stored, even if that storage method cannot scale.
+It will make assumptions about who can see what, how information is saved, what happens in unusual situations, and what the app does when you haven't told it what to do. It will decide what happens when a user forgets their password, even if you never asked for a login screen. It will decide how data is stored, even if that method will cause problems as the app grows.
 
 You need to find these hidden decisions. What did it include that you didn't ask for? What did it exclude that you assumed would be there? What happens when something goes wrong? 
 
@@ -46,7 +46,7 @@ Review the constraints before you review the cosmetics. If the core logic is bro
 
 ## 6. What Looks Fine but Might Not Be Fine?
 
-Beware of the "happy path" illusion. A smooth demo usually only shows what happens when everything goes perfectly. 
+Beware of the perfect-run illusion. A smooth demo usually only shows what happens when everything goes perfectly. 
 
 What happens when a user clicks a button twice? What happens when a form is submitted empty? What happens if the network disconnects? 
 
