@@ -32,6 +32,8 @@ AI hates being stuck. If your prompt leaves out a detail, the AI will not always
 
 It will make assumptions about who can see what, how information is saved, what happens in unusual situations, and what the app does when you haven't told it what to do. It will decide what happens when a user forgets their password, even if you never asked for a login screen. It will decide how data is stored, even if that method will cause problems as the app grows.
 
+For example, an AI might silently assume that anyone who creates an account should automatically have administrator access to view everyone else's data. It might connect features in a way that looks convenient on the screen, but introduces dangerous, unintended behavior behind the scenes. 
+
 You need to find these hidden decisions. What did it include that you didn't ask for? What did it exclude that you assumed would be there? What happens when something goes wrong? 
 
 ## 5. What Should Be Reviewed First?
@@ -66,7 +68,7 @@ There is a strong temptation to share the first draft immediately. You want feed
 
 But showing an unverified draft to collaborators or early users can be dangerous. If they see a polished UI, they will assume the app is almost done. They will start asking for tweaks to the interface rather than questioning the core logic. This locks in bad assumptions and increases the pressure on you to launch.
 
-Only share what you can explain. Before you show it to anyone, make sure you understand what the draft is actually doing.
+Only share what you can explain. Sharing with others is incredibly useful eventually, but only *after* you understand the core logic well enough to explain exactly what they are looking at and where the rough edges are. Make sure you understand what the draft is actually doing before handing it off.
 
 ## 9. Continue, Rework, or Stop
 
@@ -78,7 +80,20 @@ At the end of your review, you must make a decision.
 
 "Reviewed enough to continue" means there are no hidden surprises in the foundation. 
 
-## 10. Bridge to the Next Stage
+## 10. The First Draft Review Checklist
+
+Before you declare the first draft complete and move on to the next feature, verify these points. Keep this checklist nearby whenever an AI hands you a working demo.
+
+* **The Core Goal:** [Does the draft successfully perform the one main task it was assigned?]
+* **The Blueprint Check:** [Does this match the boundaries established before the build started, or did the AI silently expand the scope?]
+* **The Assumptions Hunt:** [What decisions did the AI make that were not in the prompt? Are they safe?]
+* **The Data Path:** [If the app saves or moves information, do you understand exactly where it goes?]
+* **The Empty State:** [What happens when a user views a screen with no data yet?]
+* **The Error State:** [What happens when a user clicks a button twice or submits a blank form?]
+* **The Unwanted Features:** [Are there extra screens, features, or buttons that should be deleted?]
+* **The Understanding Check:** [If someone asked how the core logic works, could you explain it in plain English?]
+
+## Field Note Closing
 
 Reviewing the first draft is not a delay from building; it is a critical part of building. 
 

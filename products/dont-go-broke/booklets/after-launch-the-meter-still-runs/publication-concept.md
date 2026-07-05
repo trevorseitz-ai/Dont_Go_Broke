@@ -6,7 +6,7 @@
 **Publication Type:** Booklet
 **Series:** Don’t Go Broke
 **Version:** v1.0
-**Status:** Draft
+**Status:** Approved
 
 ## Purpose of This Concept
 
