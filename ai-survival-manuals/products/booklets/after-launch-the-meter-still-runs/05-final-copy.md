@@ -31,7 +31,7 @@ You must set traps.
 
 Before the first user arrives, go into your hosting and AI provider dashboards and set up two things:
 1. **Billing Alerts:** Get an email the moment your costs hit $10, $50, or whatever you are comfortable losing. 
-2. **Hard Limits:** Tell the system to physically shut down the app or reject API calls if the bill hits a strict maximum. 
+2. **Hard Limits:** Tell the system to automatically shut down the app or reject API calls if the bill hits a strict maximum. 
 
 Let the infrastructure shut itself down before it bankrupts you. 
 
@@ -41,7 +41,7 @@ There is a common belief that if you write code once and don't touch it, it will
 
 Software rots. It decays. A live app is like a garden; if you ignore it, the environment around it will change, and the weeds will take over. 
 
-The API service you rely on for sending emails might change its security requirements. Your database provider might deprecate the version you are using. A browser update might break your layout. 
+The API service you rely on for sending emails might change its security requirements. Your database provider might stop supporting the version you are using. A browser update might break your layout. 
 
 You cannot launch an app and walk away. You have to actively maintain the environment it lives in. 
 
@@ -49,9 +49,9 @@ You cannot launch an app and walk away. You have to actively maintain the enviro
 
 If you built an app that relies on an AI API, you face a unique type of decay: AI drift. 
 
-Traditional APIs are static. If you send them a specific request, they return the exact same response every time. Large Language Models (LLMs) are not static. The companies that make them are constantly updating, tweaking, and "improving" the models behind the scenes. 
+Traditional APIs are predictable. The same request behaves the same way every time. Large Language Models (LLMs) are not static. The companies that make them are constantly updating, tweaking, and "improving" the models behind the scenes. 
 
-A prompt that generated a perfect JSON response in January might start hallucinating extra text in March. 
+A prompt that generated a perfectly formatted answer in January might start hallucinating extra text in March. 
 
 Your app's intelligence is built on shifting sand. You must regularly test your core AI interactions to ensure the model hasn't quietly changed its mind about how to answer your prompts.
 
@@ -67,7 +67,7 @@ You have to decide how you will handle support, bug reports, and feature request
 
 As an operator, you will face a psychological shift. When you were building, every hour spent resulted in a new feature you could see. 
 
-In operations, you will spend hours just keeping the lights on. You will update dependencies, fix silent errors, and respond to support emails. This is maintenance, and it can feel unrewarding compared to building. 
+In operations, you will spend hours just keeping the lights on. You will update the building blocks your app relies on, fix silent errors, and respond to support emails. This is maintenance, and it can feel unrewarding compared to building. 
 
 You must actively carve out time for maintenance. Do not confuse adding new features with maintaining a healthy application. 
 
