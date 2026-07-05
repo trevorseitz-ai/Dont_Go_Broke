@@ -1,0 +1,9 @@
+- [x] Create implementation plan
+- [x] Create task file
+- [x] Create 00-source-review.md
+- [x] Create 01-outline.md
+- [x] Create 02-section-plan.md
+- [x] Create 03-draft-copy.md
+- [x] Create 04-editorial-review.md
+- [x] Create 05-final-copy.md
+- [ ] Stop for human manuscript review
