@@ -1,0 +1,68 @@
+@page {
+  size: A5;
+  margin: 20mm 15mm;
+}
+body {
+  font-family: "Georgia", serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: #333;
+}
+h1, h2, h3, h4 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  page-break-after: avoid;
+}
+h1 { font-size: 24pt; text-align: center; margin-top: 50mm; }
+h2 { font-size: 18pt; margin-top: 2em; page-break-before: always; }
+h3 { font-size: 14pt; margin-top: 1.5em; }
+
+/* Front matter styling */
+.front-matter { page-break-after: always; }
+.series-label { text-align: center; font-size: 14pt; font-weight: bold; color: #555; }
+.disclaimer { font-size: 9pt; color: #666; margin-top: 40mm; text-align: justify; }
+.context-note { margin-top: 20mm; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; }
+.back-matter { page-break-before: always; }
+
+/* Callouts / Field notes (blockquotes) */
+blockquote {
+  border-left: 4px solid #4a90e2;
+  margin: 1.5em 0;
+  padding: 0.5em 15px;
+  background-color: #f4f8fc;
+  color: #444;
+}
+
+/* Code / Prompts */
+pre, code {
+  font-family: "Fira Code", "Courier New", monospace;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+pre {
+  padding: 10px;
+  white-space: pre-wrap;
+  page-break-inside: avoid;
+}
+
+/* Checklists */
+ul.checklist {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul.checklist li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+ul.checklist li::before {
+  content: '☐';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14pt;
+}
+
+/* To avoid orphan lists/code blocks */
+ul, ol { page-break-inside: avoid; }
