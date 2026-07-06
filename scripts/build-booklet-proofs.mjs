@@ -113,7 +113,7 @@ async function generateProof() {
     await page.setContent(html, { waitUntil: 'networkidle0' });
     
     const outPath = path.join(distDir, `${b.slug}-layout-proof-v1.0.pdf`);
-    await page.pdf({ path: outPath, format: 'A5', printBackground: true, margin: { top: '20mm', bottom: '20mm', left: '15mm', right: '15mm' } });
+    await page.pdf({ path: outPath, format: 'Letter', printBackground: true, margin: { top: '1in', bottom: '1in', left: '1.33in', right: '1.33in' } });
     console.log(`Generated ${outPath}`);
     await page.close();
   }
