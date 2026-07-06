@@ -22,7 +22,9 @@ This booklet is about what happens next. It is about how to survive the first we
 
 ---
 
-## 1. Launch Is Not the Finish Line
+## 1. The Reality of Launch
+
+### Launch Is Not the Finish Line
 
 When you launch, the type of work fundamentally changes. 
 
@@ -38,7 +40,7 @@ You must adopt an operator's mindset. An operator does not assume the system wor
 
 ---
 
-## 2. The Meter Still Runs
+### The Meter Still Runs
 
 You are no longer paying for a one-time product. You are renting infrastructure by the millisecond. Every time a user clicks a button, a tiny invisible meter ticks up. 
 
@@ -71,7 +73,13 @@ Before you can control your costs, you must map them. Use this worksheet to docu
 
 ---
 
-## 3. Provider-by-Provider Cost Review
+[ILLUSTRATION PLACEHOLDER: Monitoring the Infrastructure]
+
+---
+
+## 2. Monitoring the Infrastructure
+
+### Provider-by-Provider Cost Review
 
 You must review each major cost center individually. Use this beginner-safe guidance to check your providers before traffic arrives.
 
@@ -119,7 +127,7 @@ You must review each major cost center individually. Use this beginner-safe guid
 
 ---
 
-## 4. Background Jobs and Silent Loops
+### Background Jobs and Silent Loops
 
 The most dangerous cost in a modern application is the one that happens while nobody is using it.
 
@@ -146,7 +154,7 @@ You must audit your app for silent loops immediately after launch.
 
 ---
 
-## 5. Logs, Storage, and Database Review
+### Logs, Storage, and Database Review
 
 Compute and AI tokens get all the attention, but boring infrastructure can bankrupt you just as quickly.
 
@@ -173,7 +181,7 @@ Use this beginner-safe workflow to review your storage infrastructure:
 
 ---
 
-## 6. AI Credit Usage After Launch
+### AI Credit Usage After Launch
 
 If you built an app that relies on an AI API (like OpenAI or Anthropic), you face a unique operational risk. 
 
@@ -199,7 +207,7 @@ Instead, a small group of three power users pasted entire 500-page novels into t
 
 ---
 
-## 7. The Post-Launch Dashboard Review
+### The Post-Launch Dashboard Review
 
 You cannot manage costs if you do not look at them. Every major platform (hosting, database, AI provider) has a dashboard. You must learn to read them.
 
@@ -218,7 +226,13 @@ Log in to the dashboard of your primary platform. Look for these tabs:
 
 ---
 
-## 8. Usage Spikes and Surprise Bills
+[ILLUSTRATION PLACEHOLDER: Surviving the Spikes]
+
+---
+
+## 3. Surviving the Spikes
+
+### Usage Spikes and Surprise Bills
 
 The most dangerous assumption a first-time builder can make is, "I'll just check the billing dashboard every few days." 
 
@@ -241,7 +255,7 @@ Before the first user arrives, go into your hosting and AI provider dashboards a
 
 ---
 
-## 9. When the Bill Spikes: A Full Walkthrough
+### When the Bill Spikes: A Full Walkthrough
 
 You wake up to an email: *"Action Required: 80% of monthly budget reached."* It is only the 3rd of the month.
 
@@ -265,7 +279,7 @@ You wake up to an email: *"Action Required: 80% of monthly budget reached."* It 
 
 ---
 
-## 10. The Cost Watch
+### The Cost Watch
 
 Monitoring costs cannot be something you do "whenever you remember." You must build a habit. Small, seemingly harmless charges can hide massive scaling problems. 
 
@@ -290,7 +304,13 @@ If the cost is tied to a silent loop, an error, or a free user abusing the syste
 
 ---
 
-## 11. The First Week After Launch
+[ILLUSTRATION PLACEHOLDER: The First Week Operations]
+
+---
+
+## 4. The First Week Operations
+
+### The First Week After Launch
 
 The first seven days after you launch are the most critical period for catching silent failures and hidden costs. This is not the time to step away and relax. You must actively monitor the live environment.
 
@@ -312,7 +332,7 @@ Keep this review simple. Do not install massive analytics suites that take days 
 
 ---
 
-## 12. The User Behavior Check
+### The User Behavior Check
 
 You built the app with a specific "happy path" in mind. You assumed users would log in, click the big blue button, read the result, and log out. 
 
@@ -333,7 +353,13 @@ Do not fight your users, but do not surrender your Version One blueprint to them
 
 ---
 
-## 13. The Bug and Support Reality
+[ILLUSTRATION PLACEHOLDER: Maintenance and Support]
+
+---
+
+## 5. Maintenance and Support
+
+### The Bug and Support Reality
 
 After launch, bugs are normal. Your app will break. A third-party API will go down. The AI will refuse to answer a perfectly safe prompt. A user will experience a blank screen.
 
@@ -352,7 +378,7 @@ Do not panic. Not every bug is an emergency, and not every user request should b
 
 ---
 
-## 14. The Maintenance Debt Check
+### The Maintenance Debt Check
 
 Software is not a static object like a bridge or a house. Software is a living, decaying system. The moment you launch, the app begins accumulating "maintenance debt."
 
@@ -368,7 +394,7 @@ Maintenance is the unavoidable cost of ownership. You do not need to be a senior
 
 ---
 
-## 15. The Weekly Operating Cadence
+### The Weekly Operating Cadence
 
 Operating an app means establishing a rhythm. Once the launch excitement fades, adopt a strict weekly operating cadence. Pick a day (like Friday afternoon) and run this checklist.
 
@@ -387,7 +413,13 @@ Operating an app means establishing a rhythm. Once the launch excitement fades, 
 
 ---
 
-## 16. Feature-Cost Review Before Adding Anything New
+[ILLUSTRATION PLACEHOLDER: The Feature Cost Reality]
+
+---
+
+## 6. The Feature Cost Reality
+
+### Feature-Cost Review Before Adding Anything New
 
 By Week 2, users will start asking for new things. The reality of maintenance begins here. 
 
@@ -413,7 +445,13 @@ If the AI cannot answer these questions clearly, the feature is too dangerous to
 
 ---
 
-## 17. The Continue, Pause, Fix, Rebuild, or Stop Decision
+[ILLUSTRATION PLACEHOLDER: The Final Decision]
+
+---
+
+## 7. The Final Decision
+
+### The Continue, Pause, Fix, Rebuild, or Stop Decision
 
 Once the launch excitement has settled, the bugs are logged, the costs are mapped, and the users are watched, you must make a decision. 
 
@@ -445,58 +483,6 @@ For the launched project, you have five clear options. You must choose one at th
 
 ---
 
-## 18. "Ask the App What It Costs" Prompt Pack
-
-You do not need to be an operations engineer to manage your costs. You just need to know how to ask the AI to do the audit for you.
-
-Copy and paste these prompts into your builder any time you feel uncertain about your live architecture:
-
-*   **The Baseline Audit:** “List every service, database, or API this app depends on that could result in a bill after launch.”
-*   **The Background Audit:** “List every background process, scheduled cron job, retry mechanism, webhook listener, or queue currently running in this codebase.”
-*   **The AI Audit:** “List every place this app calls an AI model or paid API, and tell me if those calls have a strict rate limit.”
-*   **The Storage Audit:** “List every place this app stores files, logs, generated content, or user data, and tell me exactly when that data is deleted.”
-*   **The Abuse Audit:** “List every user action that could be intentionally abused to trigger repeated costs against my billing.”
-*   **The Pre-Flight Check:** “List exactly what I should cap, alert, or disable before I add any new features.”
-
----
-
----
-
-## 19. The Safe Operation Checklist
-
-Operating an app means managing a living system. Use this final protocol to ensure your system is under control before you walk away from the keyboard.
-
-- [ ] **The Meters Are Visible:** I know exactly where this app spends money.
-- [ ] **The Traps Are Set:** Hard billing limits are actively protecting my credit card.
-- [ ] **The Background is Quiet:** I have audited every cron job, retry loop, and webhook.
-- [ ] **The Edges Are Capped:** All AI inputs, file uploads, and API calls have strict maximum limits.
-- [ ] **The Shutdown Plan Exists:** I know exactly how to pull the plug if things escalate.
-
----
-
----
-
-## 20. The After-Launch Receipt
-
-To ensure you are making decisions based on reality rather than emotion, you must document the state of the live application. 
-
-Memory is flawed. If you don't write down what happened in week one, you will forget it by week four. Fill out this receipt at the end of your first week, and once a month thereafter. Keep it in a physical notebook or a dedicated digital file.
-
-### The Receipt
-
-- [ ] **What launched:** (e.g., "The Version One onboarding flow and core AI generator.")
-- [ ] **What users did:** (e.g., "14 users signed up, 10 completed onboarding, 4 generated reports.")
-- [ ] **What broke:** (e.g., "The PDF export button failed for users on mobile devices.")
-- [ ] **What cost money:** (e.g., "$4 on database compute, $12 on AI API tokens.")
-- [ ] **What was learned:** (e.g., "Users type far longer prompts than we anticipated.")
-- [ ] **What should not be expanded yet:** (e.g., "Do not add image generation until text generation costs are stabilized.")
-- [ ] **What decision was made:** (e.g., "Fix the PDF bug, Pause all new features.")
-- [ ] **Next review date:** ____/____/____
-
----
-
----
-
 ## Field Note Closing: The Goal Was Control
 
 You began this process with an idea. 
@@ -520,3 +506,62 @@ The goal was to help you stay in control.
 Software is power. When you understand how it is structured, how it breaks, and how it costs money, you own that power. You are no longer at the mercy of the machine, the platform, or the momentum. 
 
 You are the builder. You are the operator. And you are ready for whatever comes next.
+
+
+---
+
+---
+
+## Back Matter
+---
+
+---
+
+### "Ask the App What It Costs" Prompt Pack
+
+You do not need to be an operations engineer to manage your costs. You just need to know how to ask the AI to do the audit for you.
+
+Copy and paste these prompts into your builder any time you feel uncertain about your live architecture:
+
+*   **The Baseline Audit:** “List every service, database, or API this app depends on that could result in a bill after launch.”
+*   **The Background Audit:** “List every background process, scheduled cron job, retry mechanism, webhook listener, or queue currently running in this codebase.”
+*   **The AI Audit:** “List every place this app calls an AI model or paid API, and tell me if those calls have a strict rate limit.”
+*   **The Storage Audit:** “List every place this app stores files, logs, generated content, or user data, and tell me exactly when that data is deleted.”
+*   **The Abuse Audit:** “List every user action that could be intentionally abused to trigger repeated costs against my billing.”
+*   **The Pre-Flight Check:** “List exactly what I should cap, alert, or disable before I add any new features.”
+
+---
+
+---
+
+### The Safe Operation Checklist
+
+Operating an app means managing a living system. Use this final protocol to ensure your system is under control before you walk away from the keyboard.
+
+- [ ] **The Meters Are Visible:** I know exactly where this app spends money.
+- [ ] **The Traps Are Set:** Hard billing limits are actively protecting my credit card.
+- [ ] **The Background is Quiet:** I have audited every cron job, retry loop, and webhook.
+- [ ] **The Edges Are Capped:** All AI inputs, file uploads, and API calls have strict maximum limits.
+- [ ] **The Shutdown Plan Exists:** I know exactly how to pull the plug if things escalate.
+
+---
+
+---
+
+### The After-Launch Receipt
+
+To ensure you are making decisions based on reality rather than emotion, you must document the state of the live application. 
+
+Memory is flawed. If you don't write down what happened in week one, you will forget it by week four. Fill out this receipt at the end of your first week, and once a month thereafter. Keep it in a physical notebook or a dedicated digital file.
+
+### The Receipt
+
+- [ ] **What launched:** (e.g., "The Version One onboarding flow and core AI generator.")
+- [ ] **What users did:** (e.g., "14 users signed up, 10 completed onboarding, 4 generated reports.")
+- [ ] **What broke:** (e.g., "The PDF export button failed for users on mobile devices.")
+- [ ] **What cost money:** (e.g., "$4 on database compute, $12 on AI API tokens.")
+- [ ] **What was learned:** (e.g., "Users type far longer prompts than we anticipated.")
+- [ ] **What should not be expanded yet:** (e.g., "Do not add image generation until text generation costs are stabilized.")
+- [ ] **What decision was made:** (e.g., "Fix the PDF bug, Pause all new features.")
+- [ ] **Next review date:** ____/____/____
+
