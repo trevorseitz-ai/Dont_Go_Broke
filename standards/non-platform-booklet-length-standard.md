@@ -1,49 +1,74 @@
-# Don’t Go Broke Non-Platform Booklet Length Standard
+# Don’t Go Broke Non-Platform Booklet Length and Density Standard
 
 ## Purpose
-This document defines the expected length and depth standard for Don’t Go Broke non-platform booklets. It ensures all booklets in the series deliver consistent practical value and depth before final layout and storefront production.
+This document defines the length, depth, and density standards for all non-platform Don't Go Broke booklets. The goal is to ensure each booklet feels like a real, robust publication, providing deep, practical field-guide value without relying on layout padding, repetition, or generic filler. 
 
 ## Scope
-This standard applies to the current non-platform booklet set and any future similar Don’t Go Broke pre-work booklets.
+Applies to all booklets in the non-platform Don’t Go Broke series, including:
+- Before the Idea Becomes Reality
+- Before the Build Starts
+- Before the Agent Starts
+- Before You Trust the First Draft
+- After Launch, the Meter Still Runs
 
-## Standard Length Range
-Don’t Go Broke non-platform booklets should generally target **30–40 laid-out PDF pages**.
+## Why the Standard Changed
+The previous 30–40 page booklet standard was unreliable because it was based on an inflated layout system. When forced page breaks and excessive spacing were removed, it became clear that several manuscripts were too short. A subsequent density audit using existing Don't Go Broke platform pamphlets established a real-world baseline for proper publication density (averaging ~215 words per page). The standard was updated to incorporate absolute word count and density targets to ensure booklets are substantially deeper than pamphlets and physically look like professional publications without relying on CSS layout tricks.
 
-## Why Page Count Matters
-Historical layout proofs revealed that shorter booklets (e.g., 14–18 pages) often read like expanded briefs or underdeveloped outlines rather than complete, practical guides. In this context, length acts as a reliable proxy for product depth, ensuring the reader receives a standalone, complete product.
+## Pamphlet Reference Benchmark
+The existing platform pamphlets (v0, Vercel, Replit, Base44, Antigravity) established the following benchmark:
+* lowest density: 194 words/page
+* highest density: 231 words/page
+* average density: approximately 215 words/page
+* typical pamphlet length: approximately 2,400 words
+* typical pamphlet page count: approximately 11 pages
 
-## Why Page Count Is Not Enough
-Page count alone does not make a booklet complete. Hitting a 35-page target through repetition or fluff does not benefit the reader. The target length is not a padding rule; it is a structural capacity requirement to house necessary practical tools.
+## Current Gold-Standard Booklet
+**Before the Build Starts** (5,740 words, 28 pages, 205 words/page) is the only current non-platform booklet that naturally matches the pamphlet-derived publication density standard. It serves as the gold-standard reference for this booklet set.
 
-## Depth Requirements
-A manuscript must earn its length. To meet the quality standard of the series, the booklet's page count should be driven by the inclusion of:
-- Practical examples
-- Decision tools
+## Core Standard
+Page count alone is not enough. Word count alone is not enough. Words per page matters because the publication must look real, not padded. A booklet should feel substantially larger and deeper than a pamphlet. 
+
+## Manuscript Word Count
+* **target manuscript word count:** 5,500–7,000 words
+
+## Corrected-Layout Page Count
+* **corrected-layout page target:** 28–35 pages
+
+## Words Per Page Density
+* **target density:** 190–220 words per page
+
+## Underdevelopment Triggers
+* **minimum manuscript depth trigger:** below 5,000 words
+* **severe underdevelopment trigger:** below 4,500 words
+If a manuscript is only 3,000–4,000 words, it is likely still pamphlet-length unless intentionally scoped otherwise.
+
+## Over-Compression Review
+* **acceptable dense range:** 220–240 words per page (if readable)
+* **over-compressed trigger:** above 240 words per page
+* **under-dense trigger:** below 180 words per page, unless the booklet is intentionally worksheet-heavy.
+
+## What Counts as Real Depth
+Expansion must add real publication value. Valid additions include:
+- Case studies
+- Walkthroughs
+- Examples
+- Prompts
 - Checklists
-- Templates
-- Reader exercises
+- Worksheets
+- Decision tools
 - Beginner-safe explanations
-- Concrete failure scenarios
-- Clear next-step guidance
 
-## Under-Length Trigger
-A manuscript that yields **below approximately 25 laid-out pages** automatically triggers a mandatory manuscript-depth review before final layout. A shorter booklet can be approved only if the scope is intentionally narrow and the human reviewer explicitly confirms the content is complete.
+## What Does Not Count
+Do not add filler to hit word count. Repetitive warnings, fluffy adjectives, or generic abstract definitions do not count as real depth.
 
-## Over-Length Review
-A manuscript that yields **longer than 40 laid-out pages** is allowed only if the material remains highly useful, non-repetitive, and still feels like a focused booklet rather than a short book.
+## Honest Layout Rule
+Do not use CSS spacing, forced page breaks, oversized fonts, or illustrations to make a short manuscript look like a booklet. Layout must remain tight, readable, and professional. 
 
-## Reference Booklets
-The first two approved booklets in the series should be treated as the current reference standard for depth, pacing, and layout length:
-- `before-the-idea-becomes-reality` (approximately 34 laid-out PDF pages)
-- `before-the-build-starts` (approximately 36 laid-out PDF pages)
+## Exception Rule
+If a manuscript is dense, highly useful, and achieves its goals perfectly under the page target, it may be approved by human exception without being artificially inflated.
 
-## What Not to Do
-- Do not pad manuscripts simply to hit the page count.
-- Do not repeat the same warning in different words just to increase length.
-- Do not include generic AI advice or theoretical filler.
+## How This Applies to the Current Set
+Based on this standard, four of the five original booklets (ranging from 3,085 to 3,879 words) fall into the "severe underdevelopment trigger" and must be expanded to at least 5,000 words to honestly clear the standard.
 
 ## Approval Rule
-A complete booklet should feel like a practical product, not a brief. A manuscript cannot proceed to PDF generation unless it satisfies both the Depth Requirements and the Standard Length Range (or secures an explicit exception during an Under/Over-Length Review).
-
-## How This Standard Applies to the Current Set
-The layout proofs for `before-the-agent-starts` (~18 pages), `before-you-trust-the-first-draft` (~16 pages), and `after-launch-the-meter-still-runs` (~14 pages) triggered the Under-Length condition. These booklets must be expanded according to this standard's Depth Requirements to reach the 30–40 page target before final layout production resumes.
+Any final layout proof must clear the 5,000-word underdevelopment trigger and fall within healthy density ranges before being approved for storefront PDF generation and publication.
