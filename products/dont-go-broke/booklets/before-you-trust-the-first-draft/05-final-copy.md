@@ -1,24 +1,55 @@
 # Before You Trust the First Draft
 
-## Field Note Opening
-
-You asked an AI builder to create the first version of your product. A few minutes later, it returned something that looks real. 
-
-There are screens. There are buttons. There is a working navigation menu. You might even have a working demo you can click through. 
-
-That creates a dangerous feeling: *"It looks real, so it must be right."*
-
-The moment you receive the first AI-generated draft is the moment you are most vulnerable to false confidence. The project looks much closer to the finish line than it actually is. It is incredibly tempting to keep the momentum going, to add more features immediately, or to show the prototype to an investor or a potential customer.
-
-Stop.
-
-This is not the point where trust should begin. This is the point where rigorous review must begin. The blueprint you made before building is now the standard you must review the first draft against. 
-
-The first draft is not proof that the product is correct. It is simply the first thing that must be questioned. 
+*Don't Go Broke in the Age of AI*
 
 ---
 
-## 1. Why the First Draft Feels More Trustworthy Than It Is
+---
+
+## Field Note Opening
+
+You asked an AI builder to create the first version of your product. A few minutes later, it returned something that looks remarkably real. 
+
+There are screens. There are buttons. There is a working navigation menu. You might even have a live demo link that you can click through on your phone right now. 
+
+That creates a dangerous feeling: *"It looks real, so it must be right."*
+
+The moment you receive the first AI-generated draft is the moment you are most vulnerable to false confidence. The project looks much closer to the finish line than it actually is. It is incredibly tempting to keep the momentum going. You want to immediately ask the agent to add more features. You want to show the prototype to an investor, a co-founder, or a potential customer. You want to declare that the hardest part is over.
+
+Please, pause. 
+
+This is not the point where trust should begin. This is the point where rigorous review must begin. 
+
+The first draft is not proof that the product is correct. It is simply the first thing that must be questioned. If you build your second feature on top of a flawed first draft, you are pouring concrete over a cracked foundation. 
+
+In this booklet, you will learn how to review what the AI produced before you trust it, before you continue it, before you show it to others, and before you build on top of it.
+
+---
+
+---
+
+## 1. The First Draft Is a Claim, Not a Verdict
+
+When an AI agent finishes its first pass and says, "I've completed the application," it is not delivering a final verdict on reality. It is handing you a set of claims.
+
+The AI is effectively saying:
+- *I claim this is the correct structure.*
+- *I claim this is the workflow your users need.*
+- *I claim this is the right data model to store their information.*
+- *I claim this screen logic makes sense.*
+- *I claim this is what "done" looks like based on your prompt.*
+
+Your job as the builder is not to accept these claims. Your job is to test them. 
+
+In traditional software development, if a senior engineer hands you a first draft, you can reasonably assume they applied years of architectural wisdom to their choices. If an AI agent hands you a first draft, you must assume it guessed. It guessed at the permissions, it guessed at the edge cases, and it guessed at what you meant when your instructions were slightly vague.
+
+Until you verify the claims, the first draft is nothing more than an interactive hallucination.
+
+---
+
+---
+
+## 2. Why the First Draft Feels More Trustworthy Than It Is
 
 When you build an app with AI, the results can be visually stunning within minutes. A polished interface, however, can hide weak thinking. A working demo can hide fragile logic. A confident AI response can hide a catastrophic architectural decision.
 
@@ -30,7 +61,33 @@ Momentum creates false confidence. Do not mistake a slick button for a sound app
 
 ---
 
-## 2. The First Draft Review Session: A Walkthrough
+---
+
+## 3. The Looks Finished Trap
+
+We are wired to believe that if something looks finished on the surface, the foundation must be solid. 
+
+In traditional software development, reaching a working User Interface (UI) meant weeks of careful architectural planning, database design, and security modeling had already occurred. You couldn't click a button on a screen unless the heavy lifting behind it was complete.
+
+With AI, the UI often comes first. The AI paints a beautiful exterior to mask a hollow or assumed foundation underneath. This is the "Looks Finished" trap, and it is the single most common reason non-technical builders get stranded. 
+
+A polished interface can hide extraordinarily weak thinking. A working demo can hide fragile logic. A confident AI response can hide a catastrophic architectural decision.
+
+### Common Illusions in the First Draft
+
+- **Buttons that look real but do nothing:** The "Submit" button glows when you hover over it, but clicking it just refreshes the page without saving any data.
+- **Forms that do not save:** You fill out a beautifully designed "Contact Us" form, hit send, and see a green checkmark—but there is no database connected to actually store the message.
+- **Dashboards with fake data:** You see gorgeous charts and user profiles, but they are hardcoded mockups. If you create a new user, the charts don't change.
+- **Screens that exist but do not connect:** The app has a "Settings" page and a "Profile" page, but there is no way to navigate between them without manually typing the URL.
+- **Workflows built only for the happy path:** The shopping cart works perfectly if a user buys exactly one item and pays immediately, but crashes completely if they try to remove an item or their card is declined.
+
+Momentum creates false confidence. Do not mistake a slick button for a sound application.
+
+---
+
+---
+
+## 4. The First Draft Review Session: A Walkthrough
 
 Reviewing the first draft is not something you do passively while reading the AI's chat response. It is an active session. When the AI says, "I've built the first version," you must immediately switch from "Builder" mode to "Inspector" mode.
 
@@ -50,7 +107,9 @@ The rest of this booklet provides the exact tools and worksheets you need to exe
 
 ---
 
-## 3. The "Looks Done vs. Is Done" Test
+---
+
+## 5. The "Looks Done vs. Is Done" Test
 
 If the app looks finished, you must actively prove that it isn't. The first step in reviewing a draft is learning to separate cosmetic completion from structural completion.
 
@@ -75,7 +134,53 @@ Use the **"Looks Done vs. Is Done" Test** to break the illusion of the first dra
 
 ---
 
-## 4. The Screen and Data Review Protocol
+---
+
+## 6. The Original Intent Check
+
+Before you test the software, you must test the alignment. 
+
+During the planning phase, you made strict decisions about your scope, your first user, and the single problem you were solving. You defined your "Version One." The AI does not inherently respect those boundaries unless you force it to. AI agents are eager to please and will happily invent features they think you might like, expanding the scope without asking.
+
+Use the **Original Intent Check** to compare the first draft against your approved blueprint.
+
+### The Intent Checklist
+Ask these exact questions of the draft in front of you:
+
+- [ ] **Does this solve the original problem?** Look past the visual polish. Does it actually do the one specific thing you set out to do?
+- [ ] **Does it serve the first user?** Is it built for the specific audience you defined, or did it become a generic tool for everyone?
+- [ ] **Does it stay inside Version One?** Did the draft drift into Phase 2 or Phase 3 features? 
+- [ ] **Did the AI add things we explicitly excluded?** If you said "no payments in version one," is there a billing page?
+- [ ] **Did the AI skip anything essential?** Did it leave out the core algorithm because it focused too much on making the login screen look nice?
+- [ ] **Did the project drift?** Does this still feel like the product you designed, or has it morphed into something entirely different?
+
+If the project drifted, you must correct the trajectory immediately. Do not accept a product you didn't ask for just because it looks impressive.
+
+---
+
+---
+
+## 7. The User Path Walkthrough
+
+Once you confirm the app aligns with your original intent, you must step out of "Builder Mode" and into "User Mode." 
+
+Do not evaluate the app by reading the code or looking at the file list. You must perform a manual, beginner-safe walkthrough of the application exactly as a new user would experience it. 
+
+### How to Walk the Path
+Do not take shortcuts. Do not jump straight to the feature you are most excited about.
+
+1. **Start where the user starts:** Open the app in a private/incognito browsing window. Stare at the landing page or login screen. 
+2. **Perform the main action:** Try to accomplish the single primary goal of the app. 
+3. **Follow every button and next step:** Do not skip around. Let the interface guide you. If the interface doesn't tell you what to do next, the path is broken.
+4. **Notice confusing labels:** Are the buttons clear? Is the AI using strange, technical language instead of plain English?
+5. **Notice dead ends:** Do you ever reach a screen where there is no "Back" button, no "Cancel" button, and no clear way forward?
+6. **Notice assumed knowledge:** Does the app assume the user already knows how to use it? 
+
+Write down exactly where the experience breaks, feels unnatural, or requires you to guess. The AI does not feel frustration; only humans do. If the path feels broken to you, it will be impassable for your real users.
+
+---
+
+## 8. The Screen and Data Review Protocol
 
 Once you establish that the app is structurally functioning, you must review exactly what it shows and how it behaves. Do not evaluate the app as a whole. Evaluate it screen by screen, and data point by data point.
 
@@ -105,7 +210,29 @@ A beautiful screen means nothing if the database behind it is broken. Use this b
 
 ---
 
-## 5. Review by User Role
+---
+
+## 9. The Data and Memory Check
+
+A beautiful screen means nothing if the brain behind it is broken. You must perform a plain-English review to ensure the application actually remembers what it is supposed to remember.
+
+You do not need to understand database architecture to do this. You simply need to test the memory.
+
+### The Plain-English Memory Test
+
+- [ ] **Does entered information actually save?** If you type your name into a profile form and hit save, does it stay there?
+- [ ] **Can you come back later and see it?** If you close the browser tab entirely, open a new one, and navigate back to the app, is your data still there? If it disappears, the AI likely used temporary browser memory instead of a real database.
+- [ ] **Does the app show the correct information in the correct place?** If you upload a profile picture, does it appear on the dashboard? Does it appear next to your comments?
+- [ ] **Does deleting or changing something behave safely?** If you click "Delete," does the item actually disappear from the database, or is it just hidden from the screen? If you edit an item, does it overwrite the correct item, or does it accidentally overwrite something else?
+- [ ] **Is anything private visible where it should not be?** If you log in as a second test user, can you see the first user's private data? Did the AI assume all data is public by default?
+
+Do not turn this into a deep software QA exercise. You are simply verifying that the app has a functional memory that respects basic logic and privacy. 
+
+---
+
+---
+
+## 10. Review by User Role
 
 AI builders often suffer from tunnel vision. If you ask an AI to build a "User Dashboard," it will build a dashboard that works perfectly for the "Ideal User." It will forget that other types of users exist. 
 
@@ -138,7 +265,9 @@ In this case, the builder did not need to Rebuild the app. They just needed to R
 
 ---
 
-## 6. The Happy Path Trap
+---
+
+## 11. The Happy Path Trap
 
 The "Happy Path" is the sequence of clicks where the user does exactly what they are supposed to do, and the app responds exactly how it is supposed to respond.
 
@@ -177,7 +306,9 @@ To review the first draft, you must intentionally step off the Happy Path.
 
 ---
 
-## 7. What Did AI Actually Decide for You?
+---
+
+## 12. What Did AI Actually Decide for You?
 
 AI hates being stuck. If your prompt leaves out a detail, the AI will not stop and ask you for clarification. It will simply guess. 
 
@@ -212,7 +343,31 @@ Use these questions to hunt down the AI's silent decisions:
 
 ---
 
-## 8. Reviewing the Agent's Output: Files and Flows
+---
+
+## 13. The "What Did AI Add?" Review
+
+AI agents hate being stuck. If your prompt leaves out a detail, the AI will not pause to ask you for clarification. It will simply guess. It will invent features, roles, and workflows to keep the build moving. 
+
+You must actively hunt for the things the AI added without your permission. 
+
+### Common Unrequested Additions to Hunt For
+
+- **Extra account systems:** You asked for a simple blog, but the AI added a complex multi-tier user registration system.
+- **Unnecessary dashboards:** You asked for a single data table, but the AI built an entire analytics dashboard with pie charts.
+- **Fake admin panels:** The AI built a secret `/admin` URL that grants ultimate power over the app, but didn't secure it properly.
+- **Roles and permissions that were not requested:** The AI decided your app needs "Editors," "Contributors," and "Moderators," adding massive complexity to your simple app.
+- **Features that sound useful but were not in version one:** The AI added a "Dark Mode" toggle or a "Share to Social Media" button that distracts from the core goal.
+- **Placeholder integrations:** The AI added a "Pay with Stripe" button, but it is just a visual placeholder that doesn't actually connect to a bank.
+- **Invented categories, labels, or workflows:** The AI categorized your data in ways you never requested because it saw similar patterns in its training data.
+
+If you find unrequested additions, you must decide whether to keep them. Do not keep them just because they look nice. Every unrequested feature is a piece of code you now have to maintain. If it wasn't in your blueprint, cut it out.
+
+---
+
+---
+
+## 14. Reviewing the Agent's Output: Files and Flows
 
 Review does not require an engineering degree, but it does require a methodical approach. Do not start by looking at the colors or the fonts. Start with the files and the flows.
 
@@ -229,7 +384,9 @@ When an AI generates a draft, it outputs a list of files it created or modified.
 
 ---
 
-## 9. The Interrogation Workflows
+---
+
+## 15. The Interrogation Workflows
 
 Do not passively accept the AI's summary of its work. Force it to explain itself using structured interrogation. 
 
@@ -255,7 +412,9 @@ Copy and paste this into your chat to force the AI to confess its guesses:
 
 ---
 
-## 10. The First Draft Testing Worksheet
+---
+
+## 16. The First Draft Testing Worksheet
 
 Use this worksheet to track your review session. Do not move on to the next feature until this worksheet is complete.
 
@@ -274,7 +433,35 @@ Use this worksheet to track your review session. Do not move on to the next feat
 
 ---
 
-## 11. The Decision Guide: Accept, Revise, Revert, or Rebuild
+---
+
+## 17. The Keep, Fix, Cut, Question Framework
+
+As you review the first draft, you will quickly become overwhelmed by what is right, what is wrong, and what is confusing. Do not try to hold it all in your head. Do not try to write one massive prompt to fix everything at once.
+
+Instead, break the draft down into individual parts and use the **Keep, Fix, Cut, Question** framework. 
+
+For every screen, feature, and workflow in the draft, assign it one of these four tags:
+
+### 1. Keep (Correct and Useful)
+The feature does exactly what you asked. It passes the memory test. It aligns with your original intent. 
+*Action:* Protect this code. Do not ask the AI to rewrite or "optimize" this section. Consider it a stable foundation.
+
+### 2. Fix (Useful but Wrong or Incomplete)
+The core logic is sound, but it misses edge cases. The empty states are missing, or the form doesn't validate inputs. It is the right feature, but it is executed poorly.
+*Action:* Keep the current code, but issue narrow, specific instructions to fix the gaps. (e.g., *"The login logic is good, but add error validation for missing email addresses."*)
+
+### 3. Cut (Not Needed for Version One)
+The AI added an unrequested feature, or it built something that drifted away from your original intent. It might look cool, but it is a distraction.
+*Action:* Throw it away. Tell the AI explicitly to remove the feature and delete the associated code. Less code means less risk.
+
+### 4. Question (Unclear, Risky, or Needs Review)
+You don't understand how a feature works. You suspect there is fake data. You are worried about how the database is structured.
+*Action:* Do not accept or reject it yet. Interrogate the AI. Ask it to explain the logic in plain English before you make a decision.
+
+---
+
+## 18. The Decision Guide: Accept, Revise, Revert, or Rebuild
 
 At the end of your review session, you must make a decision about what to do with the first draft. You do not have to keep everything the AI generated. You are allowed to throw parts of the draft away.
 
@@ -298,7 +485,56 @@ Use this decision guide to determine your next move:
 
 ---
 
-## 12. Questions to Ask Before Continuing the Build
+---
+
+## 19. When to Stop and Rebuild
+
+Sometimes, a first draft should not be patched. 
+
+The temptation is always to ask the AI to "fix it." You write a prompt explaining what is wrong, the AI apologizes, writes more code, and patches the problem. But if the foundation is fundamentally flawed, patching it only creates a more complicated, tangled mess.
+
+You must be willing to throw the first draft away and start over. Because AI generates code so quickly, deleting bad code and writing a better, more specific prompt is often infinitely faster than trying to untangle a hallucinated architecture.
+
+### Rebuild Triggers
+
+You should strongly consider stopping and rebuilding if you encounter any of the following triggers:
+
+- **The draft solves the wrong problem:** The AI misunderstood your core intent and built an entirely different kind of application.
+- **The structure is fundamentally wrong:** The AI chose a database or framework that contradicts your approved technical stack.
+- **Too many assumptions were added:** You spend more time cutting out unrequested features than you do reviewing the core logic.
+- **The core user path is broken:** The primary action the user is supposed to take simply does not work, and the AI struggles to explain why.
+- **The project drifted far from version one:** The draft feels bloated, overly complex, and impossible to understand.
+- **Fixing it requires fighting the existing draft:** Every time the AI fixes one bug, two more appear. You feel like you are wrestling with the codebase rather than guiding it.
+
+Do not suffer from sunk-cost fallacy. The code took three minutes to generate. It owes you nothing. If the draft is a mess, delete it, refine your instructions, and have the agent build it again.
+
+---
+
+---
+
+## 20. The Confidence Receipt
+
+Before you move on to building the next feature, you must explicitly record why you trust the current draft. Do not rely on a vague feeling of "it looks good enough."
+
+Create a **Confidence Receipt** for your records. This is a simple checklist that forces you to document the state of the build.
+
+### The Receipt Checklist
+
+- [ ] **What was reviewed:** (e.g., "The new user onboarding flow.")
+- [ ] **What worked:** (e.g., "Users can create accounts and see the welcome screen.")
+- [ ] **What failed:** (e.g., "The password reset link is broken.")
+- [ ] **What was removed:** (e.g., "Cut the unrequested profile picture upload feature.")
+- [ ] **What needs another prompt:** (e.g., "Need to ask the AI to fix the password reset logic.")
+- [ ] **What must not be built on yet:** (e.g., "Do not build the dashboard until the login flow is completely secure.")
+- [ ] **What is safe to keep:** (e.g., "The database structure for user accounts is solid and approved.")
+
+By forcing yourself to fill out this receipt, you prevent momentum from pushing you forward on a fragile foundation.
+
+---
+
+---
+
+## 21. Questions to Ask Before Continuing the Build
 
 Before you write the next prompt or add the next feature, you must definitively answer these questions about the draft you just reviewed. Do not proceed until you have clear answers.
 
@@ -312,7 +548,9 @@ Before you write the next prompt or add the next feature, you must definitively 
 
 ---
 
-## 13. Before You Show It to Someone Else
+---
+
+## 22. Before You Show It to Someone Else
 
 There is a strong temptation to share the first draft immediately. You want feedback. You want validation. You want to show your investors or co-founders how fast you are moving.
 
@@ -326,7 +564,9 @@ Only share what you can explain. Sharing with others is incredibly useful, but o
 
 ---
 
-## 14. The Safe Approval Protocol
+---
+
+## 23. The Safe Approval Protocol
 
 Before you declare the first draft complete and move on to building the next major feature, execute this final protocol. 
 
@@ -342,10 +582,32 @@ If you can check every box, the draft is "reviewed enough to continue."
 
 ---
 
+---
+
+## 24. Bridge to After Launch, the Meter Still Runs
+
+If you have carefully reviewed the first draft, tested the user path, verified the memory, stripped out the assumptions, and confidently signed your receipt, you now possess a rare and valuable asset: a verified, trustworthy foundation.
+
+You can now safely build the next feature. You can safely show it to early users. You can safely move toward a live launch.
+
+But there is one final trap waiting for you.
+
+When the product is finally done, when the UI is polished, and when the core logic is secure, you will be tempted to launch it and walk away. You will assume that because the build phase is over, the risks and costs are over.
+
+That assumption will bankrupt you.
+
+Launching software does not end the cost cycle; it begins the maintenance cycle. Every time a user clicks a button, a server runs, a database queries, and a third-party API fires. Every action has a microscopic cost. In the age of AI and cloud computing, those costs can scale automatically and invisibly. 
+
+In the final booklet, *After Launch, the Meter Still Runs*, we will cover exactly what happens the day after you go live. You will learn how to monitor your costs, track user behavior, handle inevitable bugs, and decide whether a project should continue, be paused, or be completely rebuilt.
+
+---
+
+---
+
 ## Field Note Closing
 
-Reviewing the first draft is not a delay from building; it is a critical part of building. 
+Reviewing the first draft is not a delay from building; it is the most critical part of building. 
 
-By taking the time to question the output, surface the assumptions, break the happy path, and verify the logic, you transform a fragile, generated draft into a trustworthy foundation. 
+By taking the time to question the output, surface the assumptions, break the happy path, and verify the logic, you transform a fragile, generated draft into a trustworthy product. 
 
-Build with your eyes open. Once the foundation is reviewed and secure, you can safely move on to iteration, refinement, and eventually, the responsibilities of a live launch.
+Do not let the speed of the AI override your responsibility as the builder. Build with your eyes open. Question everything that looks finished. Once the foundation is reviewed and secure, you can safely step into the reality of a live launch.
