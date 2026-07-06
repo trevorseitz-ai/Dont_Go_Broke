@@ -42,8 +42,9 @@ Here is the exact sequence of a safe review session:
 4.  **Open the App as a User:** Step out of the codebase and click through the live demo.
 5.  **Test the Happy Path:** Verify that the core goal actually works.
 6.  **Break the Inputs:** Intentionally try to break the app.
-7.  **Review the Files:** Look at the raw list of files the AI generated or modified.
-8.  **Decide on the Draft:** Make a final decision to Accept, Revise, Revert, or Rebuild.
+7.  **Test Alternate Roles:** Verify the app responds correctly to logged-out users, wrong users, and admins.
+8.  **Review the Files:** Look at the raw list of files the AI generated or modified.
+9.  **Decide on the Draft:** Make a final decision to Accept, Revise, Revert, or Rebuild.
 
 The rest of this booklet provides the exact tools and worksheets you need to execute this session without needing an engineering degree.
 
@@ -74,7 +75,70 @@ Use the **"Looks Done vs. Is Done" Test** to break the illusion of the first dra
 
 ---
 
-## 4. The Happy Path Trap
+## 4. The Screen and Data Review Protocol
+
+Once you establish that the app is structurally functioning, you must review exactly what it shows and how it behaves. Do not evaluate the app as a whole. Evaluate it screen by screen, and data point by data point.
+
+### The Screen Review Checklist
+
+For every single generated screen, answer these questions:
+
+- [ ] What is this screen supposed to do?
+- [ ] What data does it pull from the database to show the user?
+- [ ] What actions can the user take on this screen?
+- [ ] What happens if the user views this screen but has no data yet?
+- [ ] What happens if the user enters bad data or clicks the wrong button?
+- [ ] What happens if the wrong user somehow accesses this screen?
+- [ ] What data on this screen looks real but might be hardcoded fake data?
+- [ ] What specific data point must be manually verified before I approve this screen?
+
+### The Data Behavior Review
+
+A beautiful screen means nothing if the database behind it is broken. Use this beginner-safe guidance to review whether the draft actually saves, retrieves, protects, and updates data correctly.
+
+- [ ] **The Persistence Check:** Does new data persist after a hard browser refresh?
+- [ ] **The Privacy Check:** Can one user see another user’s private data?
+- [ ] **The Deletion Check:** When you click "Delete," does it actually delete the record from the database, or just hide it from the screen?
+- [ ] **The Edit Check:** Does editing a record update the right one, or does it accidentally overwrite something else?
+- [ ] **The Placeholder Check:** Are AI-generated placeholder records being mistaken for real user records?
+- [ ] **The Exposure Check:** Is private information (like an API key, an email address, or a password) displayed anywhere in the code or on the screen where it shouldn't be?
+
+---
+
+## 5. Review by User Role
+
+AI builders often suffer from tunnel vision. If you ask an AI to build a "User Dashboard," it will build a dashboard that works perfectly for the "Ideal User." It will forget that other types of users exist. 
+
+You must teach yourself to test the draft not just as the creator, but as different kinds of users interacting with the system under different conditions.
+
+### The Role Testing Matrix
+
+Test the application acting as:
+*   **The Logged-Out Visitor:** Can they accidentally see the dashboard without logging in?
+*   **The New User:** What happens when they log in for the first time? Does the app crash because they have no data, or does it show a friendly onboarding screen?
+*   **The Returning User:** Does the app remember them correctly?
+*   **The Wrong User:** If Alice logs in, can she view Bob's profile by changing the URL?
+*   **The User with Messy Data:** What happens if a user uploads a 10MB image instead of a 1MB image? 
+*   **The Admin/Owner:** Do they have special privileges to manage the platform? Are those privileges secure?
+
+### Case Study: The Admin Access Mistake
+
+A builder asked an AI to create a marketplace where users could buy and sell digital templates. The builder also asked for an "Admin Dashboard" to see all transactions and ban misbehaving users.
+
+The AI built it rapidly. The marketplace looked great. The Admin Dashboard looked powerful. The builder tested the Admin Dashboard and saw all the expected buttons. 
+
+**What Looked Finished:** The Admin Dashboard was fully functional.
+**What the AI Assumed:** The AI assumed that simply putting the Admin Dashboard on a hidden URL (`/admin-dashboard`) was enough security. It did not restrict access based on user accounts.
+**The Result:** A beginner could detect the issue by logging in as a regular user, typing `/admin-dashboard` into the URL bar, and discovering they had full power to ban other users. 
+
+**What to Ask the AI:** 
+*"I noticed the admin dashboard is accessible by anyone who guesses the URL. Add strict role-based access control. Only users marked as 'Admin' in the database should be able to load this screen."*
+
+In this case, the builder did not need to Rebuild the app. They just needed to Revise the security layer before continuing.
+
+---
+
+## 6. The Happy Path Trap
 
 The "Happy Path" is the sequence of clicks where the user does exactly what they are supposed to do, and the app responds exactly how it is supposed to respond.
 
@@ -113,7 +177,7 @@ To review the first draft, you must intentionally step off the Happy Path.
 
 ---
 
-## 5. What Did AI Actually Decide for You?
+## 7. What Did AI Actually Decide for You?
 
 AI hates being stuck. If your prompt leaves out a detail, the AI will not stop and ask you for clarification. It will simply guess. 
 
@@ -148,7 +212,7 @@ Use these questions to hunt down the AI's silent decisions:
 
 ---
 
-## 6. Reviewing the Agent's Output: Files and Flows
+## 8. Reviewing the Agent's Output: Files and Flows
 
 Review does not require an engineering degree, but it does require a methodical approach. Do not start by looking at the colors or the fonts. Start with the files and the flows.
 
@@ -165,7 +229,7 @@ When an AI generates a draft, it outputs a list of files it created or modified.
 
 ---
 
-## 7. The Interrogation Workflows
+## 9. The Interrogation Workflows
 
 Do not passively accept the AI's summary of its work. Force it to explain itself using structured interrogation. 
 
@@ -191,7 +255,7 @@ Copy and paste this into your chat to force the AI to confess its guesses:
 
 ---
 
-## 8. The First Draft Testing Worksheet
+## 10. The First Draft Testing Worksheet
 
 Use this worksheet to track your review session. Do not move on to the next feature until this worksheet is complete.
 
@@ -210,7 +274,7 @@ Use this worksheet to track your review session. Do not move on to the next feat
 
 ---
 
-## 9. The Decision Guide: Accept, Revise, Revert, or Rebuild
+## 11. The Decision Guide: Accept, Revise, Revert, or Rebuild
 
 At the end of your review session, you must make a decision about what to do with the first draft. You do not have to keep everything the AI generated. You are allowed to throw parts of the draft away.
 
@@ -234,7 +298,21 @@ Use this decision guide to determine your next move:
 
 ---
 
-## 10. Before You Show It to Someone Else
+## 12. Questions to Ask Before Continuing the Build
+
+Before you write the next prompt or add the next feature, you must definitively answer these questions about the draft you just reviewed. Do not proceed until you have clear answers.
+
+- [ ] What is safe to keep?
+- [ ] What is still fake?
+- [ ] What is assumed?
+- [ ] What is untested?
+- [ ] What is risky?
+- [ ] What must be rebuilt before adding features?
+- [ ] What should be committed to version control right now?
+
+---
+
+## 13. Before You Show It to Someone Else
 
 There is a strong temptation to share the first draft immediately. You want feedback. You want validation. You want to show your investors or co-founders how fast you are moving.
 
@@ -248,12 +326,13 @@ Only share what you can explain. Sharing with others is incredibly useful, but o
 
 ---
 
-## 11. The Safe Approval Protocol
+## 14. The Safe Approval Protocol
 
 Before you declare the first draft complete and move on to building the next major feature, execute this final protocol. 
 
 - [ ] **Review the Receipt:** I have read the Change Receipt and understand why every modified file was touched.
 - [ ] **Test the Flow:** I have stepped off the Happy Path and tested broken inputs and empty states.
+- [ ] **Test the Roles:** I have viewed the app as a logged-out visitor, a new user, and an admin. 
 - [ ] **Verify the Reality:** I have confirmed there is no fake, simulated, or placeholder behavior hiding behind the UI.
 - [ ] **Approve the Assumptions:** I have interrogated the AI for its hidden guesses regarding permissions and data, and I approve them.
 - [ ] **Save the Notes:** I have saved the results of my Testing Worksheet.
