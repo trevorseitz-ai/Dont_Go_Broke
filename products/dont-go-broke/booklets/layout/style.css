@@ -5,29 +5,34 @@
 body {
   font-family: "Georgia", serif;
   font-size: 11pt;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #333;
+}
+p {
+  orphans: 3;
+  widows: 3;
 }
 h1, h2, h3, h4 {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #111;
   page-break-after: avoid;
+  break-after: avoid;
 }
-h1 { font-size: 24pt; text-align: center; margin-top: 50mm; }
-h2 { font-size: 18pt; margin-top: 2em; page-break-before: always; }
-h3 { font-size: 14pt; margin-top: 1.5em; }
+h1 { font-size: 22pt; text-align: center; margin-top: 35mm; margin-bottom: 1.25em; }
+h2 { font-size: 16pt; margin-top: 1.8em; margin-bottom: 0.6em; }
+h3 { font-size: 13pt; margin-top: 1.2em; margin-bottom: 0.5em; }
 
 /* Front matter styling */
 .front-matter { page-break-after: always; }
-.series-label { text-align: center; font-size: 14pt; font-weight: bold; color: #555; }
-.disclaimer { font-size: 9pt; color: #666; margin-top: 40mm; text-align: justify; }
-.context-note { margin-top: 20mm; padding: 15px; border: 1px solid #ccc; background: #f9f9f9; }
+.series-label { text-align: center; font-size: 12pt; font-weight: bold; color: #555; }
+.disclaimer { font-size: 9pt; color: #666; margin-top: 25mm; text-align: justify; }
+.context-note { margin-top: 12mm; padding: 10px; border: 1px solid #ccc; background: #f9f9f9; }
 .back-matter { page-break-before: always; }
 
 /* Callouts / Field notes (blockquotes) */
 blockquote {
   border-left: 4px solid #4a90e2;
-  margin: 1.5em 0;
+  margin: 1.25em 0;
   padding: 0.5em 15px;
   background-color: #f4f8fc;
   color: #444;
@@ -43,7 +48,13 @@ pre, code {
 pre {
   padding: 10px;
   white-space: pre-wrap;
+  break-inside: avoid;
   page-break-inside: avoid;
+}
+
+/* Lists */
+li {
+  margin-bottom: 0.35em;
 }
 
 /* Checklists */
@@ -54,7 +65,7 @@ ul.checklist {
 ul.checklist li {
   position: relative;
   padding-left: 25px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 ul.checklist li::before {
   content: '☐';
@@ -63,6 +74,3 @@ ul.checklist li::before {
   top: 0;
   font-size: 14pt;
 }
-
-/* To avoid orphan lists/code blocks */
-ul, ol { page-break-inside: avoid; }
