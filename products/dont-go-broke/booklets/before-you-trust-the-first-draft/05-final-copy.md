@@ -28,7 +28,9 @@ In this booklet, you will learn how to review what the AI produced before you tr
 
 ---
 
-## 1. The First Draft Is a Claim, Not a Verdict
+## 1. The Illusion of the First Draft
+
+### The First Draft Is a Claim, Not a Verdict
 
 When an AI agent finishes its first pass and says, "I've completed the application," it is not delivering a final verdict on reality. It is handing you a set of claims.
 
@@ -49,7 +51,7 @@ Until you verify the claims, the first draft is nothing more than an interactive
 
 ---
 
-## 2. Why the First Draft Feels More Trustworthy Than It Is
+### Why the First Draft Feels More Trustworthy Than It Is
 
 When you build an app with AI, the results can be visually stunning within minutes. A polished interface, however, can hide weak thinking. A working demo can hide fragile logic. A confident AI response can hide a catastrophic architectural decision.
 
@@ -63,7 +65,7 @@ Momentum creates false confidence. Do not mistake a slick button for a sound app
 
 ---
 
-## 3. The Looks Finished Trap
+### The Looks Finished Trap
 
 We are wired to believe that if something looks finished on the surface, the foundation must be solid. 
 
@@ -85,9 +87,13 @@ Momentum creates false confidence. Do not mistake a slick button for a sound app
 
 ---
 
+[ILLUSTRATION PLACEHOLDER: The First Draft Review Protocol]
+
 ---
 
-## 4. The First Draft Review Session: A Walkthrough
+## 2. The First Draft Review Protocol
+
+### The First Draft Review Session: A Walkthrough
 
 Reviewing the first draft is not something you do passively while reading the AI's chat response. It is an active session. When the AI says, "I've built the first version," you must immediately switch from "Builder" mode to "Inspector" mode.
 
@@ -109,7 +115,7 @@ The rest of this booklet provides the exact tools and worksheets you need to exe
 
 ---
 
-## 5. The "Looks Done vs. Is Done" Test
+### The "Looks Done vs. Is Done" Test
 
 If the app looks finished, you must actively prove that it isn't. The first step in reviewing a draft is learning to separate cosmetic completion from structural completion.
 
@@ -136,7 +142,7 @@ Use the **"Looks Done vs. Is Done" Test** to break the illusion of the first dra
 
 ---
 
-## 6. The Original Intent Check
+### The Original Intent Check
 
 Before you test the software, you must test the alignment. 
 
@@ -158,9 +164,13 @@ If the project drifted, you must correct the trajectory immediately. Do not acce
 
 ---
 
+[ILLUSTRATION PLACEHOLDER: Testing the User Experience]
+
 ---
 
-## 7. The User Path Walkthrough
+## 3. Testing the User Experience
+
+### The User Path Walkthrough
 
 Once you confirm the app aligns with your original intent, you must step out of "Builder Mode" and into "User Mode." 
 
@@ -180,7 +190,9 @@ Write down exactly where the experience breaks, feels unnatural, or requires you
 
 ---
 
-## 8. The Screen and Data Review Protocol
+## 4. Testing the Data and Memory
+
+### The Screen and Data Review Protocol
 
 Once you establish that the app is structurally functioning, you must review exactly what it shows and how it behaves. Do not evaluate the app as a whole. Evaluate it screen by screen, and data point by data point.
 
@@ -212,7 +224,7 @@ A beautiful screen means nothing if the database behind it is broken. Use this b
 
 ---
 
-## 9. The Data and Memory Check
+### The Data and Memory Check
 
 A beautiful screen means nothing if the brain behind it is broken. You must perform a plain-English review to ensure the application actually remembers what it is supposed to remember.
 
@@ -232,7 +244,7 @@ Do not turn this into a deep software QA exercise. You are simply verifying that
 
 ---
 
-## 10. Review by User Role
+### Review by User Role
 
 AI builders often suffer from tunnel vision. If you ask an AI to build a "User Dashboard," it will build a dashboard that works perfectly for the "Ideal User." It will forget that other types of users exist. 
 
@@ -267,7 +279,7 @@ In this case, the builder did not need to Rebuild the app. They just needed to R
 
 ---
 
-## 11. The Happy Path Trap
+### The Happy Path Trap
 
 The "Happy Path" is the sequence of clicks where the user does exactly what they are supposed to do, and the app responds exactly how it is supposed to respond.
 
@@ -306,9 +318,13 @@ To review the first draft, you must intentionally step off the Happy Path.
 
 ---
 
+[ILLUSTRATION PLACEHOLDER: Interrogating the AI's Code]
+
 ---
 
-## 12. What Did AI Actually Decide for You?
+## 5. Interrogating the AI's Code
+
+### What Did AI Actually Decide for You?
 
 AI hates being stuck. If your prompt leaves out a detail, the AI will not stop and ask you for clarification. It will simply guess. 
 
@@ -345,7 +361,7 @@ Use these questions to hunt down the AI's silent decisions:
 
 ---
 
-## 13. The "What Did AI Add?" Review
+### The "What Did AI Add?" Review
 
 AI agents hate being stuck. If your prompt leaves out a detail, the AI will not pause to ask you for clarification. It will simply guess. It will invent features, roles, and workflows to keep the build moving. 
 
@@ -367,7 +383,7 @@ If you find unrequested additions, you must decide whether to keep them. Do not 
 
 ---
 
-## 14. Reviewing the Agent's Output: Files and Flows
+### Reviewing the Agent's Output: Files and Flows
 
 Review does not require an engineering degree, but it does require a methodical approach. Do not start by looking at the colors or the fonts. Start with the files and the flows.
 
@@ -386,7 +402,7 @@ When an AI generates a draft, it outputs a list of files it created or modified.
 
 ---
 
-## 15. The Interrogation Workflows
+### The Interrogation Workflows
 
 Do not passively accept the AI's summary of its work. Force it to explain itself using structured interrogation. 
 
@@ -412,30 +428,13 @@ Copy and paste this into your chat to force the AI to confess its guesses:
 
 ---
 
----
-
-## 16. The First Draft Testing Worksheet
-
-Use this worksheet to track your review session. Do not move on to the next feature until this worksheet is complete.
-
-**Task Being Reviewed:** ___________________________
-
-- [ ] **What the AI claims is done:** (e.g., "Login flow is complete.")
-- [ ] **Happy Path Result:** Did it work when used perfectly? [Pass/Fail]
-- [ ] **Broken-Input Result:** What happened when you entered bad data? [Handled/Crashed]
-- [ ] **Empty-State Result:** What happened when there was no data? [Handled/Crashed]
-- [ ] **Refresh Result:** What happened when you refreshed the page mid-flow? [Handled/Crashed]
-- [ ] **Security Result:** Can the wrong user see private data? [Yes/No]
-- [ ] **Assumptions Found:** ___________________________
-- [ ] **Files Changed Unexpectedly:** ___________________________
-
-**Final Decision (Circle One):** Accept / Revise / Revert / Rebuild
+[ILLUSTRATION PLACEHOLDER: Making the Final Decision]
 
 ---
 
----
+## 6. Making the Final Decision
 
-## 17. The Keep, Fix, Cut, Question Framework
+### The Keep, Fix, Cut, Question Framework
 
 As you review the first draft, you will quickly become overwhelmed by what is right, what is wrong, and what is confusing. Do not try to hold it all in your head. Do not try to write one massive prompt to fix everything at once.
 
@@ -461,7 +460,7 @@ You don't understand how a feature works. You suspect there is fake data. You ar
 
 ---
 
-## 18. The Decision Guide: Accept, Revise, Revert, or Rebuild
+### The Decision Guide: Accept, Revise, Revert, or Rebuild
 
 At the end of your review session, you must make a decision about what to do with the first draft. You do not have to keep everything the AI generated. You are allowed to throw parts of the draft away.
 
@@ -487,7 +486,7 @@ Use this decision guide to determine your next move:
 
 ---
 
-## 19. When to Stop and Rebuild
+### When to Stop and Rebuild
 
 Sometimes, a first draft should not be patched. 
 
@@ -510,47 +509,13 @@ Do not suffer from sunk-cost fallacy. The code took three minutes to generate. I
 
 ---
 
----
-
-## 20. The Confidence Receipt
-
-Before you move on to building the next feature, you must explicitly record why you trust the current draft. Do not rely on a vague feeling of "it looks good enough."
-
-Create a **Confidence Receipt** for your records. This is a simple checklist that forces you to document the state of the build.
-
-### The Receipt Checklist
-
-- [ ] **What was reviewed:** (e.g., "The new user onboarding flow.")
-- [ ] **What worked:** (e.g., "Users can create accounts and see the welcome screen.")
-- [ ] **What failed:** (e.g., "The password reset link is broken.")
-- [ ] **What was removed:** (e.g., "Cut the unrequested profile picture upload feature.")
-- [ ] **What needs another prompt:** (e.g., "Need to ask the AI to fix the password reset logic.")
-- [ ] **What must not be built on yet:** (e.g., "Do not build the dashboard until the login flow is completely secure.")
-- [ ] **What is safe to keep:** (e.g., "The database structure for user accounts is solid and approved.")
-
-By forcing yourself to fill out this receipt, you prevent momentum from pushing you forward on a fragile foundation.
+[ILLUSTRATION PLACEHOLDER: Before You Show It to Anyone Else]
 
 ---
 
----
+## 7. Before You Show It to Anyone Else
 
-## 21. Questions to Ask Before Continuing the Build
-
-Before you write the next prompt or add the next feature, you must definitively answer these questions about the draft you just reviewed. Do not proceed until you have clear answers.
-
-- [ ] What is safe to keep?
-- [ ] What is still fake?
-- [ ] What is assumed?
-- [ ] What is untested?
-- [ ] What is risky?
-- [ ] What must be rebuilt before adding features?
-- [ ] What should be committed to version control right now?
-
----
-
----
-
-## 22. Before You Show It to Someone Else
+### Before You Show It to Someone Else
 
 There is a strong temptation to share the first draft immediately. You want feedback. You want validation. You want to show your investors or co-founders how fast you are moving.
 
@@ -566,25 +531,7 @@ Only share what you can explain. Sharing with others is incredibly useful, but o
 
 ---
 
-## 23. The Safe Approval Protocol
-
-Before you declare the first draft complete and move on to building the next major feature, execute this final protocol. 
-
-- [ ] **Review the Receipt:** I have read the Change Receipt and understand why every modified file was touched.
-- [ ] **Test the Flow:** I have stepped off the Happy Path and tested broken inputs and empty states.
-- [ ] **Test the Roles:** I have viewed the app as a logged-out visitor, a new user, and an admin. 
-- [ ] **Verify the Reality:** I have confirmed there is no fake, simulated, or placeholder behavior hiding behind the UI.
-- [ ] **Approve the Assumptions:** I have interrogated the AI for its hidden guesses regarding permissions and data, and I approve them.
-- [ ] **Save the Notes:** I have saved the results of my Testing Worksheet.
-- [ ] **Explain it Simply:** If someone asked how this core logic works, I could explain it to them in plain English.
-
-If you can check every box, the draft is "reviewed enough to continue."
-
----
-
----
-
-## 24. Bridge to After Launch, the Meter Still Runs
+### Bridge to After Launch, the Meter Still Runs
 
 If you have carefully reviewed the first draft, tested the user path, verified the memory, stripped out the assumptions, and confidently signed your receipt, you now possess a rare and valuable asset: a verified, trustworthy foundation.
 
@@ -611,3 +558,92 @@ Reviewing the first draft is not a delay from building; it is the most critical 
 By taking the time to question the output, surface the assumptions, break the happy path, and verify the logic, you transform a fragile, generated draft into a trustworthy product. 
 
 Do not let the speed of the AI override your responsibility as the builder. Build with your eyes open. Question everything that looks finished. Once the foundation is reviewed and secure, you can safely step into the reality of a live launch.
+
+
+---
+
+---
+
+## Back Matter
+
+### The First Draft Testing Worksheet
+
+
+Use this worksheet to track your review session. Do not move on to the next feature until this worksheet is complete.
+
+**Task Being Reviewed:** ___________________________
+
+- [ ] **What the AI claims is done:** (e.g., "Login flow is complete.")
+- [ ] **Happy Path Result:** Did it work when used perfectly? [Pass/Fail]
+- [ ] **Broken-Input Result:** What happened when you entered bad data? [Handled/Crashed]
+- [ ] **Empty-State Result:** What happened when there was no data? [Handled/Crashed]
+- [ ] **Refresh Result:** What happened when you refreshed the page mid-flow? [Handled/Crashed]
+- [ ] **Security Result:** Can the wrong user see private data? [Yes/No]
+- [ ] **Assumptions Found:** ___________________________
+- [ ] **Files Changed Unexpectedly:** ___________________________
+
+**Final Decision (Circle One):** Accept / Revise / Revert / Rebuild
+
+---
+
+---
+
+### The Confidence Receipt
+
+
+Before you move on to building the next feature, you must explicitly record why you trust the current draft. Do not rely on a vague feeling of "it looks good enough."
+
+Create a **Confidence Receipt** for your records. This is a simple checklist that forces you to document the state of the build.
+
+### The Receipt Checklist
+
+- [ ] **What was reviewed:** (e.g., "The new user onboarding flow.")
+- [ ] **What worked:** (e.g., "Users can create accounts and see the welcome screen.")
+- [ ] **What failed:** (e.g., "The password reset link is broken.")
+- [ ] **What was removed:** (e.g., "Cut the unrequested profile picture upload feature.")
+- [ ] **What needs another prompt:** (e.g., "Need to ask the AI to fix the password reset logic.")
+- [ ] **What must not be built on yet:** (e.g., "Do not build the dashboard until the login flow is completely secure.")
+- [ ] **What is safe to keep:** (e.g., "The database structure for user accounts is solid and approved.")
+
+By forcing yourself to fill out this receipt, you prevent momentum from pushing you forward on a fragile foundation.
+
+---
+
+---
+
+### Questions to Ask Before Continuing the Build
+
+
+Before you write the next prompt or add the next feature, you must definitively answer these questions about the draft you just reviewed. Do not proceed until you have clear answers.
+
+- [ ] What is safe to keep?
+- [ ] What is still fake?
+- [ ] What is assumed?
+- [ ] What is untested?
+- [ ] What is risky?
+- [ ] What must be rebuilt before adding features?
+- [ ] What should be committed to version control right now?
+
+---
+
+---
+
+### The Safe Approval Protocol
+
+
+Before you declare the first draft complete and move on to building the next major feature, execute this final protocol. 
+
+- [ ] **Review the Receipt:** I have read the Change Receipt and understand why every modified file was touched.
+- [ ] **Test the Flow:** I have stepped off the Happy Path and tested broken inputs and empty states.
+- [ ] **Test the Roles:** I have viewed the app as a logged-out visitor, a new user, and an admin. 
+- [ ] **Verify the Reality:** I have confirmed there is no fake, simulated, or placeholder behavior hiding behind the UI.
+- [ ] **Approve the Assumptions:** I have interrogated the AI for its hidden guesses regarding permissions and data, and I approve them.
+- [ ] **Save the Notes:** I have saved the results of my Testing Worksheet.
+- [ ] **Explain it Simply:** If someone asked how this core logic works, I could explain it to them in plain English.
+
+If you can check every box, the draft is "reviewed enough to continue."
+
+---
+
+---
+
