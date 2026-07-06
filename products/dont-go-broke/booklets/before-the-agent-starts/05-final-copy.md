@@ -473,3 +473,5 @@ The goal of setting these boundaries isn't to slow you down. The goal is to keep
 Set up your sandbox. Define your Safe First Task. Fill out your checklists. 
 
 When you're ready, give the agent its first instruction.
+
+Once you do, the agent will move fast. It will likely generate a first draft of your feature or layout in minutes. The next expensive mistake is trusting that draft too soon. In the next booklet, *Before You Trust the First Draft*, we will cover exactly how to interrogate what the AI produced before you build anything else on top of it. You remain in charge—not just of what gets built, but of what gets kept.
