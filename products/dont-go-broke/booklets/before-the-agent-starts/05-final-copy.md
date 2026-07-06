@@ -4,6 +4,9 @@
 
 ---
 
+
+---
+
 ## Field Note Opening
 
 In the previous booklet, we established exactly what you are building. You have a plan, a clean technology stack, and a clear set of user flows. The foundation is firmly set.
@@ -24,19 +27,9 @@ Speed without direction isn't progress. It’s just faster chaos. This booklet i
 
 ---
 
-## What You Need Before This Booklet
+[ILLUSTRATION PLACEHOLDER: The Active Threat]
 
-This booklet assumes you are moving past the initial planning phase and are ready to let an agent touch real files. Before you proceed, you should have a few basics in place:
-
-*   **A project folder (repository):** A dedicated place where your code lives.
-*   **A way to save and roll back:** A system (like Git) to snapshot your work so you can safely undo mistakes.
-*   **A basic understanding of agent capabilities:** Knowing that agents can change multiple files and run terminal commands autonomously.
-
-**A note on version control:** If you do not use Git or a similar version control tool yet, please pause. Do not let an autonomous agent edit your files until you have a reliable way to make a safe copy. You do not need to be a version control expert, but you must know how to save a working state and roll back when things break. If you aren't there yet, use an agent in "explain-only" mode to help you set up basic version control before proceeding.
-
----
-
-## 1. The Agent Is Not Just Typing Suggestions
+## 1. The Autonomous Worker
 
 If you have used ChatGPT to write a Python script, or if you use GitHub Copilot to autocomplete a function, you are used to passive AI. 
 
@@ -53,9 +46,17 @@ When an agent guesses, it usually guesses wrong. It will over-engineer simple so
 > **Field Note: The Danger of the Helpful Agent**
 > A builder asked an agent to "make the login button blue." The agent noticed that the CSS was written in raw CSS, not Tailwind. It decided Tailwind was a "best practice." It installed Tailwind via the terminal, rewrote all the CSS files, updated the build scripts, and broke the entire application. The button was blue, but nothing else worked.
 
----
+### What You Need Before This Booklet
 
-## 2. The Sandbox Strategy
+This booklet assumes you are moving past the initial planning phase and are ready to let an agent touch real files. Before you proceed, you should have a few basics in place:
+
+*   **A project folder (repository):** A dedicated place where your code lives.
+*   **A way to save and roll back:** A system (like Git) to snapshot your work so you can safely undo mistakes.
+*   **A basic understanding of agent capabilities:** Knowing that agents can change multiple files and run terminal commands autonomously.
+
+**A note on version control:** If you do not use Git or a similar version control tool yet, please pause. Do not let an autonomous agent edit your files until you have a reliable way to make a safe copy. You do not need to be a version control expert, but you must know how to save a working state and roll back when things break. If you aren't there yet, use an agent in "explain-only" mode to help you set up basic version control before proceeding.
+
+### The Sandbox Strategy
 
 Because agents have the power to execute changes across multiple files simultaneously, you must never test a new, untethered agent directly on your production-ready codebase. 
 
@@ -68,38 +69,13 @@ A Sandbox is an isolated environment where the agent can make mistakes, break th
 1. **Git Branches:** The simplest sandbox is a new Git branch. Never let an agent operate directly on `main` or `master`. Create a branch called `agent-experiment-dashboard`. If the agent ruins the code, you simply delete the branch and start over.
 2. **Dummy Repositories:** If you are asking the agent to establish a completely new architectural pattern (like setting up a complex database ORM), have it do the work in a completely separate, empty project folder. Once the agent proves it can build the architecture correctly, you can manually move the successful code into your real project.
 
-If you don't yet have version control set up, please pause and establish a "Save Point" system before letting the agent write code. You must have a reliable way to roll back when the agent makes a catastrophic mistake. 
+If you don't yet have version control set up, please pause and establish a "Save Point" system before letting the agent write code. You must have a reliable way to roll back when the agent makes a catastrophic mistake.
 
 ---
 
-## 3. The Agent Readiness Audit
+[ILLUSTRATION PLACEHOLDER: The Permission Ladder]
 
-Before letting an agent touch your project—even in a sandbox—you must perform a practical audit of your current state. Handing an agent a messy, broken project and asking it to build a new feature guarantees failure. The agent will get confused by existing bugs and try to fix them instead of doing the assigned work.
-
-Before typing your prompt, fill out this mental (or physical) audit:
-
-**1. Project State Verification**
-*   **Is the project currently running?** (If the app currently crashes on boot, stop. Do not ask an agent to build a new feature. Your only prompt should be "Help me debug this crash.")
-*   **Are there uncommitted changes?** Run `git status`. If you have uncommitted files, commit or stash them immediately. Never let an agent touch a working directory that has uncommitted human work. If the agent makes a mistake, you won't be able to easily separate its bad code from your good code.
-
-**2. Scope Targeting**
-*   **Files likely to be touched:** Can you explicitly list the 2 or 3 files this feature *should* require changing? 
-*   **Risky files exposed:** Are there core files (like `server.js`, `database.config`, or `App.jsx`) that the agent absolutely should not touch during this task?
-*   **Dependencies:** Does this task actually require a new package, or can it be done with existing libraries? (Default to: No new dependencies allowed).
-
-**3. Safety Boundaries**
-*   **Commands likely to be run:** Will the agent need to run migrations or just start the dev server?
-*   **Secrets / Environment files:** Is your `.env` file safely ignored in `.gitignore`? Does the agent have any reason to ask for API keys? (If yes, create mock keys for the agent).
-
-**4. The Exit Strategy**
-*   **Rollback plan:** If the agent destroys the next hour of work, how exactly will you revert? (e.g., `git reset --hard HEAD`).
-*   **Stopping point:** What is the precise, visual proof that the task is complete? When will you tell the agent to stop?
-
-If you cannot answer these questions, you are not ready to deploy an agent. You need to do more architectural planning first.
-
----
-
-## 4. Agent Scope Levels
+## 2. Agent Scope and Permissions
 
 Not all agent tasks carry the same risk. You must actively manage the level of authority you grant the agent based on the complexity of the task and your own understanding of the codebase. 
 
@@ -131,11 +107,9 @@ The agent is authorized to modify `package.json`, run `npm install`, or update s
 
 **Level 7: Architecture Change (Critical Risk)**
 The agent is permitted to rewrite core routing, database schemas, or authentication flows.
-*Safe for:* Advanced builders working in a highly isolated Sandbox. *Risk:* The agent fundamentally alters the application's behavior in ways the human operator no longer understands. 
+*Safe for:* Advanced builders working in a highly isolated Sandbox. *Risk:* The agent fundamentally alters the application's behavior in ways the human operator no longer understands.
 
----
-
-## 5. The Agent Permission Ladder
+### The Agent Permission Ladder
 
 If you are new to working with AI agents, you must not start at Level 7. You must climb the Agent Permission Ladder. This ladder teaches you to grant permissions gradually, building trust and verification habits along the way.
 
@@ -161,7 +135,9 @@ Never skip straight to Step 6. If you give an agent full autonomy immediately, i
 
 ---
 
-## 6. Decide What the Agent May Change
+[ILLUSTRATION PLACEHOLDER: The Sandbox Boundaries]
+
+## 3. Defining Agent Boundaries
 
 Because an agent can touch anything in your project, your first job is to tell it exactly what it is allowed to touch today. 
 
@@ -173,11 +149,9 @@ You must define the allowed scope in plain language before every major task.
 
 **Bounded:** *"You may only read `src/components/Login.js` and edit `src/css/styles.css` to style the login button."*
 
-Restrict the agent's playing field to only what is strictly necessary for the immediate task. If you are building a new UI button, the agent has no business reading your database schema or editing your routing logic. 
+Restrict the agent's playing field to only what is strictly necessary for the immediate task. If you are building a new UI button, the agent has no business reading your database schema or editing your routing logic.
 
----
-
-## 7. Decide What the Agent Must Not Touch
+### Decide What the Agent Must Not Touch
 
 Defining what the agent *can* touch is only half the battle. You must explicitly protect your core assets. 
 
@@ -193,55 +167,9 @@ Agents love to "clean up" code. They will see a working configuration file, deci
 
 ### The `.gitignore` Defense
 
-If you have sensitive API keys, `.env` files, or proprietary data in your project folder, do not rely purely on a text prompt to stop the agent from reading them. Ensure your `.gitignore` is properly configured. Many agents respect `.gitignore` files and will physically prevent themselves from indexing or reading ignored files. 
+If you have sensitive API keys, `.env` files, or proprietary data in your project folder, do not rely purely on a text prompt to stop the agent from reading them. Ensure your `.gitignore` is properly configured. Many agents respect `.gitignore` files and will physically prevent themselves from indexing or reading ignored files.
 
----
-
-## 8. Safe vs. Unsafe Agent Requests
-
-First-time builders often treat agents like magic wands. They drop massive, multi-step requests into the prompt window and expect a finished product. 
-
-These are not tasks; they are wishes. And when an agent is given a wish, it will try to fulfill it all at once, opening a dozen files, installing random libraries, and tangling the logic into an unrecoverable knot. 
-
-To use an agent safely, you must learn to translate vague wishes into concrete, bounded requests. 
-
-**Unsafe Request:** *"Fix the app."*
-*Why it's dangerous:* The agent will guess what is broken. It will run test commands, read every error log it can find, and start rewriting core files to make the errors go away.
-**Safe Request:** *"When I click the submit button on `Contact.jsx`, I get a 500 error in the console. Read `Contact.jsx` and `api/submit.js` to identify why the payload is failing. Do not write a fix yet, just explain the error."*
-
-**Unsafe Request:** *"Make login work."*
-*Why it's dangerous:* The agent will attempt to build an entire authentication system from scratch, likely installing complex libraries like Passport.js or NextAuth without asking, heavily modifying your database schema in the process.
-**Safe Request:** *"Create the UI components for a login form in `Login.jsx` with email and password fields. Do not write the backend authentication logic. Do not install any auth libraries. Just build the visual shell and console.log the form submission."*
-
-**Unsafe Request:** *"Clean up the project."*
-*Why it's dangerous:* "Clean" means nothing to an AI. It will arbitrarily enforce linting rules, reorganize your folder structure, rename variables, and break import paths across your entire application.
-**Safe Request:** *"Review `utils/helpers.js`. Identify any unused functions and remove them. Ensure the remaining functions have standard JSDoc comments. Do not touch any other file."*
-
-**Unsafe Request:** *"Improve the UI."*
-*Why it's dangerous:* The agent will likely inject a massive UI library (like Material UI or Bootstrap) and begin rewriting every component in your project to use that library's specific syntax.
-**Safe Request:** *"Update the CSS in `sidebar.css` to use a darker color palette. Change the background to dark gray and the text to white. Ensure hover states remain visible. Do not change the HTML structure."*
-
-**Unsafe Request:** *"Add payments."*
-*Why it's dangerous:* The agent will attempt a full Stripe integration, modifying backend routes, database webhooks, and frontend checkout flows simultaneously. If it fails halfway through, your codebase is permanently scarred.
-**Safe Request:** *"Review the Stripe API documentation for creating a checkout session. Write a plain-English plan for how we will integrate this into `checkout.js` and `server.js`. List the exact steps and wait for my approval."*
-
-**Unsafe Request:** *"Optimize performance."*
-*Why it's dangerous:* The agent might implement aggressive caching, rewrite your database queries, or attempt to implement server-side rendering, fundamentally altering the architecture of your application.
-**Safe Request:** *"The image loading on `Gallery.jsx` is slow. Review the component and suggest three ways we can implement lazy loading. Do not change the code yet."*
-
----
-
-## 9. Define the Safe First Task
-
-As demonstrated above, you must break your blueprint down into a **Safe First Task**. 
-
-A safe first task is narrow, isolated, and highly verifiable. It has a clear definition of "done." 
-
-Start with a small, testable chunk of work. Verify it works. Then give the agent the next small piece. Never ask an agent to perform more than one logical leap at a time. If a task requires the agent to think about UI, database storage, and email notifications all at once, the task is too large. Split it into three tasks.
-
----
-
-## 10. Set Tool and Command Boundaries
+### Set Tool and Command Boundaries
 
 Agents are increasingly capable of running commands directly in your terminal. This is a massive productivity boost, but it is also the fastest way to break your computer. 
 
@@ -286,7 +214,53 @@ If you cannot answer these questions, reject the dependency and ask the agent fo
 
 ---
 
-## 11. Make the Agent Stop and Explain
+[ILLUSTRATION PLACEHOLDER: The Safe Task]
+
+## 4. The Safe First Task
+
+### Safe vs. Unsafe Agent Requests
+
+First-time builders often treat agents like magic wands. They drop massive, multi-step requests into the prompt window and expect a finished product. 
+
+These are not tasks; they are wishes. And when an agent is given a wish, it will try to fulfill it all at once, opening a dozen files, installing random libraries, and tangling the logic into an unrecoverable knot. 
+
+To use an agent safely, you must learn to translate vague wishes into concrete, bounded requests. 
+
+**Unsafe Request:** *"Fix the app."*
+*Why it's dangerous:* The agent will guess what is broken. It will run test commands, read every error log it can find, and start rewriting core files to make the errors go away.
+**Safe Request:** *"When I click the submit button on `Contact.jsx`, I get a 500 error in the console. Read `Contact.jsx` and `api/submit.js` to identify why the payload is failing. Do not write a fix yet, just explain the error."*
+
+**Unsafe Request:** *"Make login work."*
+*Why it's dangerous:* The agent will attempt to build an entire authentication system from scratch, likely installing complex libraries like Passport.js or NextAuth without asking, heavily modifying your database schema in the process.
+**Safe Request:** *"Create the UI components for a login form in `Login.jsx` with email and password fields. Do not write the backend authentication logic. Do not install any auth libraries. Just build the visual shell and console.log the form submission."*
+
+**Unsafe Request:** *"Clean up the project."*
+*Why it's dangerous:* "Clean" means nothing to an AI. It will arbitrarily enforce linting rules, reorganize your folder structure, rename variables, and break import paths across your entire application.
+**Safe Request:** *"Review `utils/helpers.js`. Identify any unused functions and remove them. Ensure the remaining functions have standard JSDoc comments. Do not touch any other file."*
+
+**Unsafe Request:** *"Improve the UI."*
+*Why it's dangerous:* The agent will likely inject a massive UI library (like Material UI or Bootstrap) and begin rewriting every component in your project to use that library's specific syntax.
+**Safe Request:** *"Update the CSS in `sidebar.css` to use a darker color palette. Change the background to dark gray and the text to white. Ensure hover states remain visible. Do not change the HTML structure."*
+
+**Unsafe Request:** *"Add payments."*
+*Why it's dangerous:* The agent will attempt a full Stripe integration, modifying backend routes, database webhooks, and frontend checkout flows simultaneously. If it fails halfway through, your codebase is permanently scarred.
+**Safe Request:** *"Review the Stripe API documentation for creating a checkout session. Write a plain-English plan for how we will integrate this into `checkout.js` and `server.js`. List the exact steps and wait for my approval."*
+
+**Unsafe Request:** *"Optimize performance."*
+*Why it's dangerous:* The agent might implement aggressive caching, rewrite your database queries, or attempt to implement server-side rendering, fundamentally altering the architecture of your application.
+**Safe Request:** *"The image loading on `Gallery.jsx` is slow. Review the component and suggest three ways we can implement lazy loading. Do not change the code yet."*
+
+As demonstrated above, you must break your blueprint down into a **Safe First Task**. 
+
+A safe first task is narrow, isolated, and highly verifiable. It has a clear definition of "done." 
+
+Start with a small, testable chunk of work. Verify it works. Then give the agent the next small piece. Never ask an agent to perform more than one logical leap at a time. If a task requires the agent to think about UI, database storage, and email notifications all at once, the task is too large. Split it into three tasks.
+
+---
+
+[ILLUSTRATION PLACEHOLDER: The Approval Gate]
+
+## 5. The Approval Gate
 
 Agents will make silent architectural decisions unless you stop them. 
 
@@ -296,11 +270,9 @@ You dictate the workflow rhythm. The agent stops when you say stop.
 
 The most effective boundary you can set is an approval gate. Before the agent writes a single line of code, require it to explain its plan. 
 
-It is infinitely easier to correct a bad plan written in plain English than it is to untangle bad code spread across five different files. 
+It is infinitely easier to correct a bad plan written in plain English than it is to untangle bad code spread across five different files.
 
----
-
-## 12. What to Do Before Saying "Yes"
+### What to Do Before Saying "Yes"
 
 When the agent successfully outputs its step-by-step plan, the terminal will often pause with a prompt that says `Proceed? (Y/n)`. 
 
@@ -317,9 +289,27 @@ Do not reflexively hit `Y`. This is your approval gate. Before saying yes, perfo
    - *No:* The plan is dangerous. Reject it and rewrite your prompt.
    - *Narrow Scope:* The plan is mostly good, but too large. Tell the agent: *"Only do step 1 for now. Do not do steps 2-5."*
 
+### Reviewing the Agent’s Change Receipt
+
+When the agent claims it has finished a task, the session is not over. Do not immediately move on to the next task. First, you must review the change receipt. 
+
+Ask the agent to summarize exactly what it just did, then critically evaluate its response against what you actually asked for.
+
+**Look for:**
+* **What files changed:** Did it touch the specific files you authorized?
+* **Why they changed:** Did the logic match the approved plan?
+* **What was not changed:** Did it leave your protected files alone?
+* **What commands were run:** Did it sneak in a silent installation or migration?
+* **What risks remain:** Does the agent mention any edge cases it ignored?
+* **What you still need to verify:** What manual testing is required before you can trust this code?
+
+If the change receipt reveals the agent touched files outside the allowed scope, you must treat the entire change as suspect.
+
 ---
 
-## 13. When to Stop Using the Agent
+[ILLUSTRATION PLACEHOLDER: Recognizing Failure]
+
+## 6. Recognizing Agent Failure
 
 There will be moments during a build when the agent becomes a liability rather than an asset. You must recognize when the agent is thrashing and take the keyboard back. 
 
@@ -334,49 +324,32 @@ There will be moments during a build when the agent becomes a liability rather t
 
 When the agent thrashes, do not ask the agent to fix the mess it just made. Revert your code to the last save point, manually review the architecture, and rethink your prompt.
 
----
+### The Bad Agent Session: A Recovery Walkthrough
 
-## 14. Reviewing the Agent’s Change Receipt
+Even with perfect boundaries, an agent will occasionally lose context, hallucinate a tool that doesn't exist, or embark on a "Silent Refactor." 
 
-When the agent claims it has finished a task, the session is not over. Do not immediately move on to the next task. First, you must review the change receipt. 
+### The Scenario
+You ask the agent to fix the padding on a button. 
+It fixes the padding. It then notices a typo in the header and fixes the typo. It then notices the routing logic is outdated, updates the router, installs a new version of `react-router-dom` via the terminal, breaks the app, and spends the next hour trying to fix the router it just broke. 
 
-Ask the agent to summarize exactly what it just did, then critically evaluate its response against what you actually asked for.
+The agent claims it fixed the padding, but the app no longer boots. 
 
-**Look for:**
-* **What files changed:** Did it touch the specific files you authorized?
-* **Why they changed:** Did the logic match the approved plan?
-* **What was not changed:** Did it leave your protected files alone?
-* **What commands were run:** Did it sneak in a silent installation or migration?
-* **What risks remain:** Does the agent mention any edge cases it ignored?
-* **What you still need to verify:** What manual testing is required before you can trust this code?
+### The Recovery Sequence
+Do not ask the agent to "fix what you just broke." The agent has lost context. Its mental map of your codebase is now corrupted by the hallucinations and unnecessary changes it just made. Asking it to fix a mess usually results in a deeper mess.
 
-If the change receipt reveals the agent touched files outside the allowed scope, you must treat the entire change as suspect. 
+Instead, execute the recovery sequence:
 
----
-
-## 15. The Agent Session Log
-
-To maintain discipline, treat every complex agent session like a science experiment. Keep a running log of what you ask the agent to do and what the result is. This prevents you from blindly trusting the agent over hours of compounding changes.
-
-Use this simple text template (keep it in a `session-log.md` file in your sandbox):
-
-```markdown
-### Session Date/Time:
-- **Task Requested:** [e.g., Build the navigation bar]
-- **Files Allowed:** [e.g., Header.jsx, header.css]
-- **Files Actually Changed:** [Fill in after completion]
-- **Commands Run:** [Fill in after completion]
-- **Dependencies Changed:** [None / List them]
-- **Stop Points Triggered:** [e.g., Agent paused to ask about mobile layout]
-- **Human Decision:** [e.g., Instructed agent to ignore mobile for now]
-- **Result:** [Keep / Revert / Needs Follow-up]
-```
-
-By forcing yourself to log the session, you prevent the dangerous habit of chaining ten agent requests together without ever manually verifying the code.
+1. **Stop:** Press the halt button in your IDE or terminal. Cut off the agent's execution immediately.
+2. **Inspect the Diff:** Look at your Git changes. You will see the button padding change, plus dozens of unauthorized routing changes and a modified `package.json`. 
+3. **Revert:** Throw away all the agent's changes. Run `git restore .` or `git reset --hard HEAD` to return your project to the last known working Save Point. 
+4. **Narrow the Scope:** Acknowledge that your initial prompt gave the agent too much leeway. 
+5. **Restart with Stricter Boundaries:** Start a completely new chat thread. The old thread is poisoned with bad context. In the new thread, explicitly ban the agent from looking at or touching the router.
 
 ---
 
-## 16. Before / During / After: The Operating Rhythm
+[ILLUSTRATION PLACEHOLDER: The Operating Rhythm]
+
+## 7. The Operating Rhythm
 
 Managing an agent requires a strict operating rhythm. If you abandon this rhythm, the agent will eventually drift out of scope. 
 
@@ -399,30 +372,54 @@ Managing an agent requires a strict operating rhythm. If you abandon this rhythm
 
 ---
 
-## 17. The Bad Agent Session: A Recovery Walkthrough
+## Back Matter
 
-Even with perfect boundaries, an agent will occasionally lose context, hallucinate a tool that doesn't exist, or embark on a "Silent Refactor." 
+### The Agent Readiness Audit
 
-### The Scenario
-You ask the agent to fix the padding on a button. 
-It fixes the padding. It then notices a typo in the header and fixes the typo. It then notices the routing logic is outdated, updates the router, installs a new version of `react-router-dom` via the terminal, breaks the app, and spends the next hour trying to fix the router it just broke. 
+Before letting an agent touch your project—even in a sandbox—you must perform a practical audit of your current state. Handing an agent a messy, broken project and asking it to build a new feature guarantees failure. The agent will get confused by existing bugs and try to fix them instead of doing the assigned work.
 
-The agent claims it fixed the padding, but the app no longer boots. 
+Before typing your prompt, fill out this mental (or physical) audit:
 
-### The Recovery Sequence
-Do not ask the agent to "fix what you just broke." The agent has lost context. Its mental map of your codebase is now corrupted by the hallucinations and unnecessary changes it just made. Asking it to fix a mess usually results in a deeper mess.
+**1. Project State Verification**
+*   **Is the project currently running?** (If the app currently crashes on boot, stop. Do not ask an agent to build a new feature. Your only prompt should be "Help me debug this crash.")
+*   **Are there uncommitted changes?** Run `git status`. If you have uncommitted files, commit or stash them immediately. Never let an agent touch a working directory that has uncommitted human work. If the agent makes a mistake, you won't be able to easily separate its bad code from your good code.
 
-Instead, execute the recovery sequence:
+**2. Scope Targeting**
+*   **Files likely to be touched:** Can you explicitly list the 2 or 3 files this feature *should* require changing? 
+*   **Risky files exposed:** Are there core files (like `server.js`, `database.config`, or `App.jsx`) that the agent absolutely should not touch during this task?
+*   **Dependencies:** Does this task actually require a new package, or can it be done with existing libraries? (Default to: No new dependencies allowed).
 
-1. **Stop:** Press the halt button in your IDE or terminal. Cut off the agent's execution immediately.
-2. **Inspect the Diff:** Look at your Git changes. You will see the button padding change, plus dozens of unauthorized routing changes and a modified `package.json`. 
-3. **Revert:** Throw away all the agent's changes. Run `git restore .` or `git reset --hard HEAD` to return your project to the last known working Save Point. 
-4. **Narrow the Scope:** Acknowledge that your initial prompt gave the agent too much leeway. 
-5. **Restart with Stricter Boundaries:** Start a completely new chat thread. The old thread is poisoned with bad context. In the new thread, explicitly ban the agent from looking at or touching the router. 
+**3. Safety Boundaries**
+*   **Commands likely to be run:** Will the agent need to run migrations or just start the dev server?
+*   **Secrets / Environment files:** Is your `.env` file safely ignored in `.gitignore`? Does the agent have any reason to ask for API keys? (If yes, create mock keys for the agent).
 
----
+**4. The Exit Strategy**
+*   **Rollback plan:** If the agent destroys the next hour of work, how exactly will you revert? (e.g., `git reset --hard HEAD`).
+*   **Stopping point:** What is the precise, visual proof that the task is complete? When will you tell the agent to stop?
 
-## 18. The Agent Prompt Pack
+If you cannot answer these questions, you are not ready to deploy an agent. You need to do more architectural planning first.
+
+### The Agent Session Log
+
+To maintain discipline, treat every complex agent session like a science experiment. Keep a running log of what you ask the agent to do and what the result is. This prevents you from blindly trusting the agent over hours of compounding changes.
+
+Use this simple text template (keep it in a `session-log.md` file in your sandbox):
+
+```markdown
+### Session Date/Time:
+- **Task Requested:** [e.g., Build the navigation bar]
+- **Files Allowed:** [e.g., Header.jsx, header.css]
+- **Files Actually Changed:** [Fill in after completion]
+- **Commands Run:** [Fill in after completion]
+- **Dependencies Changed:** [None / List them]
+- **Stop Points Triggered:** [e.g., Agent paused to ask about mobile layout]
+- **Human Decision:** [e.g., Instructed agent to ignore mobile for now]
+- **Result:** [Keep / Revert / Needs Follow-up]
+```
+
+By forcing yourself to log the session, you prevent the dangerous habit of chaining ten agent requests together without ever manually verifying the code.
+
+### The Agent Prompt Pack
 
 Do not reinvent the wheel every time you open a new chat window. Copy and paste these practical prompts directly into your agent's system instructions or initial request.
 
@@ -444,9 +441,7 @@ Do not reinvent the wheel every time you open a new chat window. Copy and paste 
 **The Recovery/Restart Prompt** (Use in a fresh thread after a failure)
 > "We are restarting this task because the previous attempt failed due to unauthorized scope expansion. The task is [Task Name]. You are strictly forbidden from modifying [Area that broke previously]. Focus entirely on the isolated task."
 
----
-
-## 19. The Before-the-Agent Checklist
+### The Before-the-Agent Checklist
 
 Before you hit "Enter" on your first agent prompt, confirm your readiness.
 
