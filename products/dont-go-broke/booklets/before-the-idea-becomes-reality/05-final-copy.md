@@ -1,5 +1,9 @@
 # Before the Idea Becomes Reality
-## A practical field guide for deciding whether an AI app idea is ready to become a real project
+[ILLUSTRATION PLACEHOLDER: The Illusion of the Idea]
+
+## Field Note Opening
+
+A practical field guide for deciding whether an AI app idea is ready to become a real project.
 
 ### Field Note Opening
 
@@ -28,7 +32,7 @@ Read it before you choose a platform. Before the blueprint. Before the build req
 
 ---
 
-## 1. Introduction: Why This Booklet Exists
+## 1. Why AI Makes Ideas Feel Ready Too Soon
 
 A few years ago, an unclear app idea stayed unclear for a while. You might talk about it or sketch it, but there was friction between the idea and the build. Software engineering was expensive, slow, and opaque to non-technical founders. You could not simply wish a database into existence. You had to convince a developer, pay an agency, or spend months learning how to code yourself. That friction was frustrating, but it served a purpose: it forced you to think before you built. 
 
@@ -56,27 +60,6 @@ That is not failure. That is the exact moment this booklet is for.
 
 ---
 
-## 2. The Idea Readiness Audit
-
-Before you can decide if an idea is ready to become a build, you must perform a practical audit of what you actually have. An idea is weightless; a build has gravity. The audit forces you to measure the weight of your idea.
-
-If you skip this audit, you will eventually perform it anyway—but you will do it months from now, when the code is broken, the UI is messy, and you are exhausted trying to figure out why no one wants to use the app. 
-
-Do the audit while the idea is still cheap. Ask yourself these baseline questions right now:
-
-1. **What problem does this idea solve?** (If you can only name features, you don't know the problem yet. Features are answers. You need to know the question.)
-2. **Who is the idea for?** (If the answer is "everyone," the idea is not ready. Version one needs a specific person.)
-3. **What do you expect the app, tool, or system to do?** (What is the core mechanic that makes it valuable? What is the one action the user takes that makes them glad they installed it?)
-4. **What result would count as success?** (Is it time saved? Money earned? A frustrating manual task completely automated?)
-5. **What could go wrong?** (If you build it perfectly, how could it still fail? What assumptions are you making about user behavior? Will people actually remember to open it?)
-6. **What do you not know yet?** (Are you assuming people will pay for this? Are you assuming the necessary data is legally available?)
-7. **Does this idea actually need software, or could it be tested manually?** (We will return to this critical question later. It is the most important question in this booklet.)
-
-Write down the answers. If the answers are vague, the idea is vague. That is fine. But it means the idea is not ready to become a project. 
-
----
-
-## 3. Why AI Makes Ideas Feel Ready Too Soon
 
 AI can make an idea look real very quickly. You type a description, and a dashboard or a workflow appears. It feels like progress.
 
@@ -101,7 +84,24 @@ This question separates the actual value of your idea from the thrill of seeing 
 
 ---
 
-## 4. The Difference Between an Idea and a Project
+
+### The Idea Readiness Audit
+
+Do the audit while the idea is still cheap. Ask yourself these baseline questions right now:
+
+1. **What problem does this idea solve?** (If you can only name features, you don't know the problem yet. Features are answers. You need to know the question.)
+2. **Who is the idea for?** (If the answer is "everyone," the idea is not ready. Version one needs a specific person.)
+3. **What do you expect the app, tool, or system to do?** (What is the core mechanic that makes it valuable? What is the one action the user takes that makes them glad they installed it?)
+4. **What result would count as success?** (Is it time saved? Money earned? A frustrating manual task completely automated?)
+5. **What could go wrong?** (If you build it perfectly, how could it still fail? What assumptions are you making about user behavior? Will people actually remember to open it?)
+6. **What do you not know yet?** (Are you assuming people will pay for this? Are you assuming the necessary data is legally available?)
+7. **Does this idea actually need software, or could it be tested manually?** (We will return to this critical question later. It is the most important question in this booklet.)
+
+Write down the answers. If the answers are vague, the idea is vague. That is fine. But it means the idea is not ready to become a project.
+
+[ILLUSTRATION PLACEHOLDER: Idea vs Project]
+
+## 2. The Difference Between an Idea and a Project
 
 An idea says: *“This could be something.”*
 A project says: *“This is what we are building first.”*
@@ -135,7 +135,9 @@ Maybe you have already committed to a feature, a platform, or a design direction
 
 ---
 
-## 5. The Problem Before Product Test
+[ILLUSTRATION PLACEHOLDER: Testing the Problem]
+
+## 3. The Problem Before Product Test
 
 Many app ideas begin as features: “I want an app with profiles, reminders, dashboards, and groups.”
 
@@ -186,7 +188,7 @@ Then ask:
 
 ---
 
-## 6. The Real User Check
+### The Real User Check
 
 Version one is not for everyone. 
 
@@ -231,7 +233,7 @@ A first version needs someone specific to help. Without that person, the project
 
 ---
 
-## 7. The Manual Version Test
+### The Manual Version Test
 
 AI can write code so fast that it is tempting to build software to solve every problem. But software is expensive to maintain, hard to change, and prone to breaking. 
 
@@ -260,7 +262,9 @@ Test the idea manually first. If it works, you have proven the problem exists an
 
 ---
 
-## 8. What Counts as Version One?
+[ILLUSTRATION PLACEHOLDER: Defining Version One]
+
+## 4. What Counts as Version One?
 
 Version one is not the whole dream. It is the smallest useful version of the project. 
 
@@ -288,7 +292,7 @@ Every feature should earn its place. Before the build starts, version one should
 
 ---
 
-## 9. What Is Explicitly Not Included Yet?
+### What Is Explicitly Not Included Yet?
 
 A good version one needs a “not yet” list. 
 
@@ -316,7 +320,9 @@ Write it down. That is the feature to watch. If everything feels too important t
 
 ---
 
-## 10. The Cost of Making It Real
+[ILLUSTRATION PLACEHOLDER: The Cost Weight]
+
+## 5. The Cost of Making It Real
 
 Before an idea becomes a project, it exists only in your mind. It is free. It has no bugs, no hosting costs, and no angry users.
 
@@ -340,7 +346,7 @@ If you understand these obligations and are willing to take them on, you are rea
 
 ---
 
-## 11. What Would Make This Project Too Risky?
+### What Would Make This Project Too Risky?
 
 Some ideas should not become projects yet. That does not mean they should die; it means they need more clarity before they become real. 
 
@@ -377,7 +383,7 @@ A stop sign means the idea needs more clarity before it becomes real.
 
 ---
 
-## 12. The "Not Yet" Decision
+## 6. The "Not Yet" Decision
 
 In a world where you can build anything instantly, the most powerful decision you can make is "Not Yet."
 
@@ -397,7 +403,9 @@ Building software is not the only way to make progress. Sometimes, the best prog
 
 ---
 
-## 13. Ready, Pause, or Safe First Commitment
+[ILLUSTRATION PLACEHOLDER: The Decision Crossroads]
+
+## 7. Ready, Pause, or Safe First Commitment
 
 You do not need certainty. You just need enough clarity to move forward with your eyes open. 
 
@@ -436,7 +444,8 @@ If the answer is Ready, there is one more important thing to know. The next step
 
 ---
 
-## 14. Bridge to the Next Booklet: Before the Build Starts
+## Field Note Closing
+
 
 If your idea is ready to become a project, you have done important work. You have defined the idea, the problem, the first user, version one, what is not included yet, and the stop signs.
 
