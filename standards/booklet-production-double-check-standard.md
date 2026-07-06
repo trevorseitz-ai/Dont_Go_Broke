@@ -48,4 +48,13 @@ Before final PDF generation, a human must visually open the proof PDF and explic
 - [ ] Overall visual consistency
 - [ ] Final PDF readiness
 
+## 6. Sibling Match Gate
+Before final PDF generation, the reviewer must compare each booklet against `Before the Build Starts` and answer:
+- [ ] Does it sound like the same series?
+- [ ] Does it assume the same general reader, or does it bridge any skill increase?
+- [ ] Does it look like the same publication family?
+- [ ] Does it use headings, field notes, checklists, prompts, and callouts consistently?
+- [ ] Would it pass the table test?
+- [ ] If it differs, is the difference justified by sequence role?
+
 *If a booklet fails any of these gates, it must be kicked back to the editorial or layout phase for correction. Final PDF generation is blocked until all boxes are checked.*

@@ -15,8 +15,15 @@
 * **Meets density target (190–220):** [Yes/No/Justified Exception]
 * **Classification:** [Brief / Pamphlet / Booklet]
 
-## Gold-Standard Comparison
-* **Comparable to `before-the-build-starts`?** [Yes/No - explain briefly]
+## Sibling Match Review
+* **tone match:** [ ]
+* **reading level match:** [ ]
+* **technical level match:** [ ]
+* **visual rhythm match:** [ ]
+* **table test result:** [ ]
+* **sequence bridge present:** [ ]
+* **exception needed:** [ ]
+* **approval status:** [ ]
 
 ## Layout Integrity
 * **Does the layout look honest?** [Yes/No - confirm no padding/inflation was used]

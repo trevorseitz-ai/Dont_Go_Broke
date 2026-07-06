@@ -89,6 +89,7 @@ Before generating the final `dist/` PDFs, a "Layout Proof" must be generated for
 - [ ] Visual density review (is it honest, or artificially padded?)
 - [ ] Human visual proof review (TOC, spacing, list rendering)
 - [ ] Page-break review (are there awkward orphans/widows?)
+- [ ] Table-test review (viewed as page thumbnails or printed contact-sheet across all booklets, does it look like a unified publication family?)
 - [ ] Final approval gate (does it pass the `booklet-production-double-check-standard.md`?)
 
 *Only after passing this strict quantitative and visual approval gate will the final, storefront-ready PDFs be compiled.*
