@@ -82,9 +82,7 @@ A section does not earn major-section status if it is only: a list, a worksheet,
 - **Trim size:** US Letter — 8.5 × 11 in (612 × 792 pts). Confirmed 2026-07-07 from the locked reference PDF; all 27 pages are this size.
 - **Body point size:** ~14.7pt. Confirmed 2026-07-07 from the locked reference PDF. All siblings use this value.
 - **Heading size:** ~22pt (~1.5× body). Confirmed 2026-07-07.
-- **Margins:** measure all four margins from a standard body page of the locked reference and match within ±0.1 inch. Do not interpret "comfortable white space" — there is nothing to interpret; copy the measured values.
-
-> Note for build script: `scripts/build-booklet-proofs.mjs` currently generates A5 PDFs. The locked reference is US Letter. Update the build script's `format` parameter to match before generating conformant proofs.
+- **Margins:** 90 pts = 1.25 in = 31.75 mm on all four sides. Equal margins, confirmed 2026-07-08 from the locked reference PDF content stream. Match within ±0.5pt.
 
 ---
 

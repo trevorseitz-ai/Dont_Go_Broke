@@ -49,7 +49,11 @@ Ratio: 22 / 14.7 = **1.49×** body (the standard previously stated 1.6–1.8×; 
 
 ## Margins
 
-Not yet measured. Requires visual inspection or image-based extraction of the locked reference PDF. Measure all four margins from a standard body page and record here before any booklet layout pass.
+**90 pts = 1.25 in = 31.75 mm — all four sides (equal margins).**
+
+Measured 2026-07-08 from the page clipping path in the raw PDF content stream. The outer coordinate transform `[0.24, 0, 0, -0.24, 0, 792]` applied to the clip rectangle `375 375 1800 2550` yields exactly 90 pts on every side. Verified across multiple body pages — all identical.
+
+Text area: 432 × 612 pts (6.0 × 8.5 in) within the US Letter page.
 
 ---
 
