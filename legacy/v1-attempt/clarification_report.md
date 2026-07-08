@@ -1,3 +1,6 @@
+> ⚠️ DEPRECATED — 2026-07-07. Superseded by /factory/station-map-v2.md and /standards/.
+> Historical record only. Agents: do not follow anything in this file.
+
 # Cleanup Clarification Report
 
 ## 1. Current Approved Source-of-Truth Path
