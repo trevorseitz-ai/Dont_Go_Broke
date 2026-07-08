@@ -69,19 +69,22 @@ A section does not earn major-section status if it is only: a list, a worksheet,
 
 ## Typeface Rule
 
-- **Body:** Helvetica Neue, regular weight. Fallback: Arial. No other substitutions. No serif body text. No light or thin weights. True bold only for emphasis and run-in labels — no faux bold, no semibold.
+- **Body:** Times Roman (serif). Fallback: Times New Roman. No light or thin weights. True bold only for emphasis and run-in labels — no faux bold, no semibold.
 - **Headings:** Same family as body, bold. No display or decorative faces.
 - **Monospace:** All code, terminal commands, file paths, and copy-paste prompts use a single monospace face throughout all five booklets: Menlo. Fallback: Courier New. Monospace blocks are set 1pt smaller than body text, with a light background tint or 0.5pt rule box — match whichever treatment appears in the locked reference; if the reference contains no monospace, use the tint, and use it identically in every sibling.
 
-**Font confirmation pending 2026-07-07.** Verify Helvetica Neue and Menlo against the embedded fonts in the approved PDF before the first agent conformance run. If the PDF uses different faces, update the body and monospace entries above to match.
+**Font confirmed 2026-07-07.** Embedded fonts in the approved PDF: Times Roman (body/headings), Menlo-Regular and Menlo-Bold (monospace). Previous specification of Helvetica Neue was incorrect and has been updated to match the locked reference.
 
 ---
 
 ## Page Geometry Rule
 
-- **Trim size:** must match the locked reference exactly. Measure it from the PDF; do not assume US Letter.
-- **Body point size:** must match the locked reference exactly (measure; expected range 10–11pt). All siblings use the same value.
+- **Trim size:** US Letter — 8.5 × 11 in (612 × 792 pts). Confirmed 2026-07-07 from the locked reference PDF; all 27 pages are this size.
+- **Body point size:** ~14.7pt. Confirmed 2026-07-07 from the locked reference PDF. All siblings use this value.
+- **Heading size:** ~22pt (~1.5× body). Confirmed 2026-07-07.
 - **Margins:** measure all four margins from a standard body page of the locked reference and match within ±0.1 inch. Do not interpret "comfortable white space" — there is nothing to interpret; copy the measured values.
+
+> Note for build script: `scripts/build-booklet-proofs.mjs` currently generates A5 PDFs. The locked reference is US Letter. Update the build script's `format` parameter to match before generating conformant proofs.
 
 ---
 
