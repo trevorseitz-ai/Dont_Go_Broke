@@ -57,15 +57,15 @@ Text area: 432 × 612 pts (6.0 × 8.5 in) within the US Letter page.
 
 ---
 
-## Leading
+## Line Spacing / Leading
 
-Not yet measured. Requires visual/image-based extraction. Target: match the locked reference exactly per the conformance standard.
+Line spacing equals the line height — no additional leading above or below. The `line-height` value is the full baseline-to-baseline distance; no extra paragraph-level space is added between lines.
 
 ---
 
 ## Folio (Page Number)
 
-Not yet measured. Inspect the locked reference for position, size, and suppression behavior on cover/illustration pages.
+All pages are counted. Cover is page 1 and carries **no folio**. Numbering begins at page 2 and runs through page 27. The displayed folio number equals the document page number (no offset). No folio suppression on any other page type.
 
 ---
 

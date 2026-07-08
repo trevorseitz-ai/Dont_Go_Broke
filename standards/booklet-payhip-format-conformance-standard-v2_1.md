@@ -99,8 +99,8 @@ With geometry locked above, verify the result:
 
 ## Leading and Paragraph Rhythm Rule
 
-- Leading: 1.4–1.5x body size. Match the locked reference's measured value; apply identically in all siblings.
-- Paragraph spacing: match the locked reference's measured value. No oversized gaps. No spacing inflation to raise page count.
+- Line spacing equals the line height — no additional leading is added above or below lines. The `line-height` value is the full baseline-to-baseline distance. Confirmed 2026-07-08 from the locked reference.
+- Paragraph spacing: no oversized gaps. No spacing inflation to raise page count. Match the locked reference exactly.
 
 ---
 
@@ -183,8 +183,9 @@ Format conformance includes read-feel. All siblings:
 
 ## Page Furniture Rule
 
-- Folio (page number) on every body page, positioned and styled exactly as the locked reference.
-- Front matter, back matter, and full-page illustration pages follow the locked reference's folio behavior (measure whether the master suppresses folios there and copy it).
+- The cover (document page 1) carries **no folio**.
+- All other pages (2–27 in the reference) are numbered. The displayed folio equals the document page number — numbering starts at 2, not 1. No folio is suppressed on any other page type.
+- Folio position and style: match the locked reference exactly.
 - No headers or footers beyond what the locked reference contains.
 
 ---
