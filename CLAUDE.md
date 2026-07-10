@@ -16,7 +16,7 @@ A content production factory for the *Don't Go Broke in the Age of AI* series â€
 
 **`/legacy/` is historical.** Never follow, cite as authority, or resurrect any process from `/legacy/`. Those files exist for audit only.
 
-**`/reference/` is read-only.** Never modify any file in `/reference/`. Never modify any file in the `products/dont-go-broke/booklets/before-the-build-starts/` folder.
+**`/reference/` is read-only.** Never modify any file in `/reference/`.
 
 **Full file replacements only.** When producing or revising any production artifact, return a complete replacement file. Never return diffs, partial files, or "replace this paragraph" instructions.
 
@@ -65,7 +65,7 @@ npm run build:pamphlets
 Booklets in sequence:
 
 1. Before the Idea Becomes Reality
-2. Before the Build Starts â€” **gold-standard sibling reference; do not modify**
+2. Before the Build Starts
 3. Before the Agent Starts
 4. Before You Trust the First Draft
 5. After Launch, the Meter Still Runs

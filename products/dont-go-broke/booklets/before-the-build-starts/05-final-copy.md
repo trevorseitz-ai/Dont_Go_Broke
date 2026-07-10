@@ -1,8 +1,4 @@
-# Before the Build Starts
-
-*Don't Go Broke in the Age of AI*
-
----
+<!-- COVER: asset-01-unclear-blueprint-construction-site.png -->
 
 ## Field Note Opening
 
@@ -27,8 +23,6 @@ The blueprint comes before the build.
 That is the lesson of this booklet. Not because planning is glamorous. Not because blueprints are exciting. Because the alternative — handing a vague idea to a fast tool and hoping for the best — is how budgets disappear, confidence erodes, and projects stall in a pile of AI-generated code that nobody quite understands.
 
 You are going to build something. This booklet helps you get ready.
-
----
 
 ## Section 1 – The Mistake Happens Before the Tool Choice
 
@@ -58,7 +52,19 @@ The first step is not picking a tool.
 
 The first step is knowing what you need the tool to build.
 
----
+### A Tale of Two Builders
+
+Two builders had the same idea on the same day: a simple app to help freelance photographers track which clients still owed them money.
+
+The first builder opened an AI tool immediately. "Build me an app for photographers to track invoices," they typed. The AI, working from a category instead of a job, generated a full client-management platform: contact records, project galleries, invoice generation, payment processing, email reminders, and a reporting dashboard. It looked impressive. It also took most of the afternoon to review, needed three different services connected before anything worked end to end, and included features — like the gallery — that had nothing to do with the actual problem of unpaid invoices.
+
+The second builder spent twenty minutes before opening any tool at all. They wrote: "A freelance photographer needs to see, at a glance, which clients haven't paid yet, so they can follow up before the amount becomes a write-off." That is a job, not a category. When they handed this to the same AI tool, the output was a single screen: a list of clients, an amount owed, a paid/unpaid toggle. Nothing else. It took ten minutes to review, and every part of it mapped directly to the problem.
+
+Both builders used the same tool. Both builders got exactly what they asked for. The difference in cost, review time, and clarity did not come from the platform — it came from the twenty minutes one of them spent before opening it.
+
+This is the pattern worth internalizing before you read any further in this booklet: every section that follows is really just a more structured version of what the second builder did instinctively. Define the job. Constrain the scope. Write it down before the tool has a chance to guess.
+
+<!-- ILLUSTRATION: asset-02-wrong-order-vs-right-order.png -->
 
 ## Section 2 – Define the Job Before Defining the App
 
@@ -98,7 +104,15 @@ The tradeoff: writing the job takes fifteen minutes. Skipping the job and correc
 
 Fifteen minutes of definition before building. That is the price. The alternative is paying ten times that in rework after building.
 
----
+### What a Vague Job Statement Costs in Practice
+
+Consider how a single vague word compounds. A builder writes: "Users need to manage their subscriptions." The word "manage" is doing an enormous amount of unexamined work. Does "manage" mean view? Cancel? Upgrade? Pause? Compare pricing? Export a receipt? Each interpretation implies a different set of screens, a different amount of database complexity, and a different amount of AI-generated code you will need to review.
+
+An AI handed "manage their subscriptions" will not ask which of these you meant. It will pick the most common interpretation across similar apps in its training data, which usually means all of them. You will get cancel flows, upgrade flows, billing history, and a comparison table, when the job you actually cared about might have been just one of these — say, "a subscriber needs to cancel without calling support," full stop.
+
+The fix costs almost nothing. Replace "manage their subscriptions" with the specific action: "A subscriber needs to cancel their plan in under a minute, without needing to contact support." That single sentence eliminates every screen that isn't the cancellation flow, before the AI ever generates one.
+
+This is the real value of the fifteen-minute job statement. It is not a formality. It is the single cheapest edit you will ever make to a project, because it happens before a single line of code exists, rather than after you have already paid to generate, review, and remove the parts you didn't need.
 
 ## Section 3 – Decide What Version One Really Is
 
@@ -132,7 +146,15 @@ The discipline of version one is the discipline of saying: "I will prove the job
 
 Decide what version one really is before you open the AI tool. Write it down. Make the list short. If the list is not short, you are building the dream version, and the dream version is the one most likely to cost more than you planned.
 
----
+### Sorting a Real Feature List
+
+Here is what the "must work / can wait / not yet" sort looks like applied to an actual idea: a builder wants an app that helps small gyms schedule classes.
+
+Their first feature list, written in one sitting, includes: class scheduling, member sign-ups, waitlists, instructor payroll, a mobile app, push notification reminders, a loyalty points system, social sharing, and an analytics dashboard for the gym owner.
+
+Sorted honestly, it looks different. **Must work:** class scheduling, member sign-ups. Without these two, there is no product — a gym cannot use an app that doesn't let members see or book a class. **Can wait:** waitlists, reminders. Useful, and worth adding once the core loop is proven, but a gym can operate for a few weeks without them. **Not yet:** instructor payroll, a mobile app, loyalty points, social sharing, an analytics dashboard. Every one of these is a legitimate feature for a mature product and a serious distraction for a version one, because each one adds its own data model, its own edge cases, and its own review burden before you have even confirmed that gyms want the core scheduling loop in the first place.
+
+Notice what happened to the list: nine features became two "must work" items. That is not a smaller vision. It is the same vision, sequenced correctly. The gym owner still gets payroll and a loyalty program eventually — just not before you know the scheduling feature actually works for a real gym.
 
 ## Section 4 – Create the Blueprint Before the Build
 
@@ -166,9 +188,25 @@ The blueprint is not bureaucracy. It is protection. It takes thirty minutes to w
 
 Write the blueprint. Keep it to one page. Make it plain. Then use it as the measuring stick for everything the AI builds.
 
----
+<!-- ILLUSTRATION: asset-03-blueprint-stack-diagram.png -->
 
-## Section 5 – Map the User Journey
+## Section 5 – Review the Output Against the Blueprint
+
+The real test of a blueprint comes after the AI generates something, not before. A blueprint you never check against is not a contract — it is just a note you wrote to yourself and forgot to use.
+
+Say your blueprint lists four required screens: a login screen, a dashboard, an item-entry form, and a summary view. The AI generates all four — plus a settings screen, a user-profile screen, and an onboarding wizard with three additional slides.
+
+Without a blueprint, this looks like the AI being thorough. The extra screens look polished. They feel like generosity. A builder without a written reference might simply accept all seven screens, because nothing on the page says they weren't supposed to be there.
+
+With a blueprint in hand, the review is mechanical instead of impressionistic: four screens were requested, seven were built. Three screens exist that were never part of the plan, meaning three screens now need to be reviewed, tested, and maintained that you did not budget time or money for. The blueprint does not tell you whether the extra screens are bad — it tells you that a decision was made without you, and now you get to decide whether to keep it, on purpose, instead of by default.
+
+The same check applies beyond screens. Compare the required data the AI actually stored against what the blueprint specified — an extra field or table is exactly as easy to wave through as an extra screen, and exactly as expensive to maintain later. Compare what got excluded, too: if the blueprint explicitly ruled out a notifications system and the AI quietly built one anyway "for completeness," that is scope creep wearing a helpful disguise.
+
+This is what makes the blueprint a contract rather than a suggestion. A suggestion can quietly expand. A contract has to be checked against, line by line, and anything outside it has to be a deliberate choice rather than an accident of what the AI assumed you probably also wanted.
+
+Do this review before you move on to mapping the user journey. A blueprint that was never checked against the actual output is not protecting anything — it is just a document that happens to exist.
+
+## Section 6 – Map the User Journey
 
 The blueprint tells you what the product contains. The user journey tells you how the product works from the user's perspective.
 
@@ -194,9 +232,21 @@ There is a specific danger with AI-generated products that user journey mapping 
 
 Map the journey before you build. Write it as a story, not a diagram. Keep it focused on the core job. If the journey has more than ten steps, version one might be too big.
 
----
+### Why the Journey Catches What the Blueprint Misses
 
-## Section 6 – Define Agent Boundaries Before the Agent Starts
+A blueprint and a user journey can both be technically complete and still describe two different products, because a list of screens does not tell you what happens between them.
+
+Take a simple example: a blueprint for an expense-tracking app lists three screens — a login screen, an entry form, and a summary view. That blueprint is accurate. It is also silent on a dozen questions a real user will hit immediately. What does the summary view show the very first time, before any expenses exist — a screen full of empty charts, or a helpful prompt to add the first entry? If someone submits the entry form with the amount field blank, what happens — a clear error, or a confusing blank confirmation? If someone closes the app mid-entry and reopens it, is their half-typed expense still there, or gone?
+
+None of these questions are visible in a screen list. They only become visible when you narrate the actual sequence a person moves through — arrive, see nothing yet, get told what to do first, do it, see it saved, come back later, do it again. Write that sequence out and the missing empty-state screen, the missing validation message, and the missing "unsaved work" behavior all surface on their own, because the story doesn't make sense without them.
+
+This is also where AI-generated products go wrong most often, because a language model trained on thousands of expense-tracking apps will happily generate a plausible-looking summary screen, entry form, and login flow without ever being asked what a first-time user sees before any data exists. It fills the gap with whatever pattern is most common in its training data, which is not the same as the pattern your actual first user will experience. Walking through the journey before the build is how you catch that gap while it is still a sentence you can edit, instead of a screen you have to explain to a confused new user after launch.
+
+A journey does not need to be elaborate to do this job. Ten short sentences describing what the user sees and does, in order, will surface more real problems than an hour spent staring at a polished mockup.
+
+<!-- ILLUSTRATION: asset-04-user-path-process-diagram.png -->
+
+## Section 7 – Define Agent Boundaries Before the Agent Starts
 
 AI coding agents are powerful, fast, and helpful. They are also unbounded by default.
 
@@ -232,9 +282,9 @@ Setting boundaries is not about distrusting the AI. It is about respecting the f
 
 Write the boundaries down. Include them in the prompt. Make them explicit. An agent without boundaries will build freely. An agent with boundaries will build what you asked for.
 
----
+<!-- ILLUSTRATION: asset-05-ai-guessing-zone-diagram.png -->
 
-## Section 7 – Prepare the Handoff
+## Section 8 – Prepare the Handoff
 
 Everything you have done so far — defining the job, constraining version one, creating the blueprint, mapping the user journey, setting agent boundaries — has been preparation. Now it is time to package that preparation into something the AI can use.
 
@@ -266,6 +316,8 @@ Each guess adds work. Each piece of added work costs credits. Each credit is mon
 
 The handoff is also your baseline for review. When the AI returns its first output, you compare the output against the handoff. Does the output match the blueprint? Does it follow the user journey? Does it respect the boundaries? Does it solve the job? If you do not have a handoff document, you are reviewing the AI's output against your memory, and memory is unreliable, especially when a polished AI-generated interface is persuading you that what you see is what you wanted.
 
+This is why keeping a Build Receipt is worth the extra few minutes.
+
 > **Build Receipt**
 >
 > Once the handoff is assembled, create a short Build Receipt — a single-page reference that captures the essentials in compressed form. The Build Receipt is not the handoff itself. It is a snapshot you can return to quickly during review and future iterations.
@@ -282,9 +334,9 @@ The handoff is also your baseline for review. When the AI returns its first outp
 
 Prepare the handoff before you open the AI tool. Review it once. Then hand it over. The thirty minutes you spend assembling the handoff will save you the most expensive hours of the entire project: the hours spent correcting a build that started without one.
 
----
+<!-- ILLUSTRATION: asset-06-build-receipt-card.png -->
 
-## Section 8 – The Final Pre-Build Review
+## Section 9 – The Final Pre-Build Review
 
 You have the job defined. You have version one constrained. You have the blueprint written. You have the user journey mapped. You have the agent boundaries set. You have the handoff assembled.
 
@@ -341,7 +393,7 @@ A checked box is not readiness. Readiness is the clarity behind the check. If an
 
 Open the tool. Hand over the blueprint. Let the AI build what you designed.
 
----
+<!-- ILLUSTRATION: asset-07-pre-build-readiness-checklist.png -->
 
 ## Field Note Closing
 
@@ -366,3 +418,78 @@ You are going to build something. You have an idea worth pursuing. The AI tool y
 Before it starts generating, make sure it knows what to build.
 
 The blueprint comes before the build. Always.
+
+## Back Matter
+
+### The Pre-Build Prompt Pack
+
+You do not have to define the job, the scope, the blueprint, and the boundaries entirely on your own. Use these prompts to get the AI to help you stress-test your own thinking before you hand over anything for it to build.
+
+**The Job Clarifier Prompt**
+> "I am about to describe a product idea to you. Before you suggest any features, screens, or technology, ask me these three questions one at a time: Who specifically is the user? What specific problem are they facing? What is the one thing the product must do to solve it? Do not let me answer with a feature list — push back if I do."
+
+**The Scope Guard Prompt**
+> "Here is my list of features: [paste your list]. Sort them into three groups: 'must work' (the product fails at its core job without this), 'can wait' (helpful, not required for version one), and 'not yet' (belongs to a future version). Be strict. If you are unsure whether something is must-work, default to can-wait."
+
+**The Blueprint Stress-Test Prompt**
+> "Here is my blueprint: [paste your blueprint]. Read it as if you have never spoken to me. Tell me anything that is ambiguous, anything you would have to guess about, and any screen or piece of data you would need to invent because it was not specified."
+
+**The Boundary-Setting Prompt**
+> "I am about to ask you to build the following: [describe the task]. Before you begin, list what you believe is in scope, what you believe is out of scope, and any assumption you are about to make that I have not explicitly confirmed. Wait for my approval before generating any code."
+
+**The Handoff Completeness Prompt**
+> "Here is my full handoff: job statement, version one scope, blueprint, user journey, and agent boundaries. [paste all five]. Tell me which of these five elements is the least specific, and what a builder in my position would need to add to make it usable without guessing."
+
+### The Blueprint & Handoff Worksheet
+
+Use this worksheet to assemble everything this booklet asked you to define, in one place, before you open an AI tool.
+
+<p class="worksheet-item"><strong>1. The Job Statement</strong></p>
+
+> The user is: __________, who faces the problem of __________, and needs the product to __________.
+
+<p class="worksheet-item"><strong>2. Version One Scope</strong></p>
+
+> Must work: __________
+>
+> Can wait: __________
+>
+> Not yet: __________
+
+<p class="worksheet-item"><strong>3. The Blueprint</strong></p>
+
+> Purpose: __________
+>
+> User: __________
+>
+> Core flow: __________
+>
+> Required screens: __________
+>
+> Required data: __________
+>
+> Explicitly excluded: __________
+
+<p class="worksheet-item"><strong>4. The User Journey</strong></p>
+
+> Write the journey as a short story, start to finish: __________
+
+<p class="worksheet-item"><strong>5. Agent Boundaries</strong></p>
+
+> What the agent may build: __________
+>
+> What the agent must not build: __________
+>
+> Where the agent must stop: __________
+>
+> What the agent must not decide: __________
+
+<p class="worksheet-item"><strong>6. Build Receipt Snapshot</strong></p>
+
+> Problem definition: __________
+>
+> User persona: __________
+>
+> Success criteria: __________
+
+Keep this worksheet somewhere you can find it during the build. It is the single reference every later booklet in this series assumes you already have in hand.
